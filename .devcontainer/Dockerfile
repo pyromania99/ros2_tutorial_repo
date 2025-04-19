@@ -10,3 +10,10 @@ LABEL org.opencontainers.image.licenses="MIT"
 
 # handle default shell
 SHELL ["/bin/bash", "-c"]
+
+COPY rosPkgs.list /tmp/rosPkgs.list
+RUN sudo apt-get update \
+   && sudo apt-get -y install --no-install-recommends $(cat /tmp/rosPkgs.list) \
+   && sudo apt-get autoremove -y \
+   && sudo apt-get clean -y \
+   && sudo rm -rf /var/lib/apt/lists/*

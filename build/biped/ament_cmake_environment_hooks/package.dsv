@@ -1,0 +1,4 @@
+source;share/biped/local_setup.bash
+source;share/biped/local_setup.dsv
+source;share/biped/local_setup.sh
+source;share/biped/local_setup.zsh

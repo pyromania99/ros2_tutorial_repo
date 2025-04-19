@@ -1,0 +1,80 @@
+/**:
+  controller_manager:
+    ros__parameters:
+      update_rate: 1000 # Hz
+          
+      left_leg_joint_trajectory_controller:
+        type: joint_trajectory_controller/JointTrajectoryController
+          
+      # right_leg_joint_trajectory_controller:
+      #   type: joint_trajectory_controller/JointTrajectoryController
+        
+      joint_state_broadcaster:
+        type: joint_state_broadcaster/JointStateBroadcaster
+
+  left_leg_joint_trajectory_controller:
+    ros__parameters:
+      joints:
+        - left_hip1_joint
+        - left_hip2_joint
+        - left_knee_joint
+        # - right_hip1_joint
+        # - right_hip2_joint
+        # - right_knee_joint
+      command_interfaces:
+        - effort
+      state_interfaces:
+        - position
+        - velocity
+      state_publish_rate: 50.0
+      action_monitor_rate: 20.0
+      allow_partial_joints_goal: true
+      allow_integration_in_goal_trajectories: false
+      interpolation_method: splines
+      open_loop_control: false
+      start_with_holding: true
+      allow_nonzero_velocity_at_trajectory_end: false
+      cmd_timeout: 0.0
+      constraints:
+        stopped_velocity_tolerance: 1.0
+        goal_time: 1.0
+        left_hip1_joint:
+          trajectory: 1.0
+          goal: 1.0
+        left_hip2_joint:
+          trajectory: 1.0
+          goal: 1.0
+        left_knee_joint:
+          trajectory: 1.0
+          goal: 1.0
+        # right_hip1_joint:
+        #   trajectory: 1.0
+        #   goal: 1.0
+        # right_hip2_joint:
+        #   trajectory: 1.0
+        #   goal: 1.0
+        # right_knee_joint:
+        #   trajectory: 1.0
+        #   goal: 1.0
+      gains:
+        left_hip1_joint:
+          p: 5.0
+          i: 0.0
+          d: 0.5
+          i_clamp: 0.0
+          ff_velocity_scale: 0.0
+          angle_wraparound: false
+        left_hip2_joint:
+          p: 5.0
+          i: 0.0
+          d: 0.5
+          i_clamp: 0.0
+          ff_velocity_scale: 0.0
+          angle_wraparound: false
+        left_knee_joint:
+          p: 35.0
+          i: 0.0
+          d: 4.5
+          i_clamp: 0.0
+          ff_velocity_scale: 0.0
+          angle_wraparound: false

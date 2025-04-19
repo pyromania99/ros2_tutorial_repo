@@ -1,0 +1,52 @@
+---
+biped_controller:
+  ros__parameters:
+    update_rate: 100  # Hz
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+    biped_controller:
+      type: position_controllers/JointGroupPositionController
+
+biped_controller:
+  ros__parameters:
+    joints:
+      - right_hip1_joint
+      - right_hip2_joint
+      - right_knee_joint
+      - left_hip1_joint
+      - left_hip2_joint
+      - left_knee_joint
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity
+
+joint_limits:
+  ros__parameters:
+    right_hip1_joint:
+      max_position: 1.5
+      min_position: -1.5
+      max_velocity: 10
+    right_hip2_joint:
+      max_position: 2.0
+      min_position: -2.0
+      max_velocity: 10
+    right_knee_joint:
+      max_position: 1.6
+      min_position: -1.6
+      max_velocity: 30
+    left_hip1_joint:
+      max_position: 1.5
+      min_position: -1.5
+      max_velocity: 10
+    left_hip2_joint:
+      max_position: 2.0
+      min_position: -2.0
+      max_velocity: 10
+    left_knee_joint:
+      max_position: 1.6
+      min_position: -1.6
+      max_velocity: 10
