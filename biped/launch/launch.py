@@ -1,7 +1,7 @@
 from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument, ExecuteProcess, IncludeLaunchDescription
 from launch.substitutions import LaunchConfiguration, Command, PathJoinSubstitution
-from launch.conditions import IfCondition
+from launch.conditions import IfCondition, UnlessCondition
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch_ros.actions import Node
 from launch_ros.descriptions import ParameterValue
@@ -47,7 +47,7 @@ def generate_launch_description():
 
     # Joint State Publisher GUI (for debugging)
     joint_state_publisher_gui = Node(
-        condition=IfCondition(LaunchConfiguration('use_rviz')),
+        condition=UnlessCondition(LaunchConfiguration('use_gazebo')),  # <-- safer than use_sim_time here
         package='joint_state_publisher_gui',
         executable='joint_state_publisher_gui',
         name='joint_state_publisher_gui',
@@ -65,11 +65,13 @@ def generate_launch_description():
     )
 
     gazebo = IncludeLaunchDescription(
-            PythonLaunchDescriptionSource(
-                [os.path.join(get_package_share_directory('ros_gz_sim'),
-                              'launch', 'gz_sim.launch.py')]),
-            launch_arguments=[('gz_args', ['-r empty.sdf'])],
-            condition=IfCondition(use_sim_time))
+        PythonLaunchDescriptionSource(
+            [os.path.join(get_package_share_directory('ros_gz_sim'),
+                          'launch', 'gz_sim.launch.py')]
+        ),
+        launch_arguments=[('gz_args', ['-r empty.sdf'])],
+        condition=IfCondition(LaunchConfiguration('use_gazebo'))
+    )
 
     # Bridge
     bridge = Node(
@@ -77,9 +79,10 @@ def generate_launch_description():
         executable='parameter_bridge',
         output='screen',
         parameters=[
-            {'use_sim_time': use_sim_time}],
-        condition=IfCondition(use_sim_time),
-        arguments=['/clock@rosgraph_msgs/msg/Clock[gz.msgs.Clock']
+            {'use_sim_time': use_sim_time}
+        ],
+        condition=IfCondition(LaunchConfiguration('use_gazebo')),
+        arguments=['/clock@rosgraph_msgs/msg/Clock[gz.msgs.Clock]']
     )
 
     spawn_entity = Node(
@@ -87,14 +90,15 @@ def generate_launch_description():
         executable='create',
         output='screen',
         parameters=[{'use_sim_time': use_sim_time}],
-        condition=IfCondition(use_sim_time),
+        condition=IfCondition(LaunchConfiguration('use_gazebo')),
         arguments=[
             '-name', 'robot',
             '-x', str(-3.5),
             '-y', str(0.0),
             '-z', str(0.0),
             '-Y', str(0.0),
-            '-topic', 'robot_description'],
+            '-topic', 'robot_description'
+        ]
     )
 
     controller_manager = Node(
@@ -129,12 +133,14 @@ def generate_launch_description():
     )
     
     load_joint_state_broadcaster = Node(
+        condition=IfCondition(LaunchConfiguration('use_gazebo')),
         package='controller_manager',
         executable='spawner',
         parameters=[{'use_sim_time': use_sim_time}],
         arguments=['joint_state_broadcaster'],
         output='screen'
     )
+
     dynamic_python_scripts = []
     for script in os.listdir(src_dir):
         if script.endswith('.py'):  # Only include Python files
