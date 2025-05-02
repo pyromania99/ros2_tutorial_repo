@@ -1,0 +1,57 @@
+[0.020s] Invoking command in '/ros2_ws/src/build/biped': CMAKE_PREFIX_PATH=/ros2_ws/src/install/gz_ros2_control:/ros2_ws/src/install/gz_ros2_control_tests:/ros2_ws/src/install/gz_ros2_control_demos:/ros2_ws/src/install/biped:/opt/ros/humble /usr/bin/cmake --build /ros2_ws/src/build/biped -- -j16 -l16
+[0.076s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.307s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.323s] -- Found rclcpp: 16.0.12 (/opt/ros/humble/share/rclcpp/cmake)
+[0.363s] -- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.366s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.375s] -- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.384s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.395s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.456s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.461s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.628s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.684s] -- Found ros2_control: 2.49.0 (/opt/ros/humble/share/ros2_control/cmake)
+[0.684s] -- Found ros2_controllers: 2.43.0 (/opt/ros/humble/share/ros2_controllers/cmake)
+[0.684s] -- Found gz_ros2_control: 1.1.8 (/ros2_ws/src/install/gz_ros2_control/share/gz_ros2_control/cmake)
+[0.760s] -- Configuring done
+[0.767s] -- Generating done
+[0.769s] -- Build files have been written to: /ros2_ws/src/build/biped
+[0.799s] Invoked command in '/ros2_ws/src/build/biped' returned '0': CMAKE_PREFIX_PATH=/ros2_ws/src/install/gz_ros2_control:/ros2_ws/src/install/gz_ros2_control_tests:/ros2_ws/src/install/gz_ros2_control_demos:/ros2_ws/src/install/biped:/opt/ros/humble /usr/bin/cmake --build /ros2_ws/src/build/biped -- -j16 -l16
+[0.802s] Invoking command in '/ros2_ws/src/build/biped': CMAKE_PREFIX_PATH=/ros2_ws/src/install/gz_ros2_control:/ros2_ws/src/install/gz_ros2_control_tests:/ros2_ws/src/install/gz_ros2_control_demos:/ros2_ws/src/install/biped:/opt/ros/humble /usr/bin/cmake --install /ros2_ws/src/build/biped
+[0.814s] -- Install configuration: ""
+[0.814s] -- Execute custom install script
+[0.814s] -- Up-to-date symlink: /ros2_ws/src/install/biped/share/biped/launch/launch.py
+[0.815s] -- Up-to-date symlink: /ros2_ws/src/install/biped/share/biped/urdf/biped.urdf
+[0.815s] -- Up-to-date symlink: /ros2_ws/src/install/biped/share/biped/urdf/biped.urdf.xacro
+[0.815s] -- Up-to-date symlink: /ros2_ws/src/install/biped/share/biped/urdf/common.xacro
+[0.815s] -- Up-to-date symlink: /ros2_ws/src/install/biped/share/biped/config/biped.yaml
+[0.815s] -- Up-to-date symlink: /ros2_ws/src/install/biped/share/biped/config/biped_config.rviz
+[0.815s] -- Up-to-date symlink: /ros2_ws/src/install/biped/share/biped/config/biped_controller.yaml
+[0.815s] -- Up-to-date symlink: /ros2_ws/src/install/biped/share/biped/meshes/base_link.stl
+[0.815s] -- Up-to-date symlink: /ros2_ws/src/install/biped/share/biped/meshes/left_femur.stl
+[0.815s] -- Up-to-date symlink: /ros2_ws/src/install/biped/share/biped/meshes/left_hip.stl
+[0.816s] -- Up-to-date symlink: /ros2_ws/src/install/biped/share/biped/meshes/left_hip1.stl
+[0.816s] -- Up-to-date symlink: /ros2_ws/src/install/biped/share/biped/meshes/left_tibia.stl
+[0.816s] -- Up-to-date symlink: /ros2_ws/src/install/biped/share/biped/meshes/right_femur.stl
+[0.816s] -- Up-to-date symlink: /ros2_ws/src/install/biped/share/biped/meshes/right_hip.stl
+[0.816s] -- Up-to-date symlink: /ros2_ws/src/install/biped/share/biped/meshes/right_hip1.stl
+[0.816s] -- Up-to-date symlink: /ros2_ws/src/install/biped/share/biped/meshes/right_tibia.stl
+[0.816s] -- Symlinking: /ros2_ws/src/install/biped/share/biped/src/controller_switcher.py
+[0.832s] -- Symlinking: /ros2_ws/src/install/biped/share/biped/src/effort_slider_gui.py
+[0.852s] -- Symlinking: /ros2_ws/src/install/biped/share/biped/src/leg_slider_gui.py
+[0.863s] -- Up-to-date symlink: /ros2_ws/src/install/biped/share/ament_index/resource_index/package_run_dependencies/biped
+[0.863s] -- Up-to-date symlink: /ros2_ws/src/install/biped/share/ament_index/resource_index/parent_prefix_path/biped
+[0.863s] -- Up-to-date symlink: /ros2_ws/src/install/biped/share/biped/environment/ament_prefix_path.sh
+[0.863s] -- Up-to-date symlink: /ros2_ws/src/install/biped/share/biped/environment/ament_prefix_path.dsv
+[0.863s] -- Up-to-date symlink: /ros2_ws/src/install/biped/share/biped/environment/path.sh
+[0.863s] -- Up-to-date symlink: /ros2_ws/src/install/biped/share/biped/environment/path.dsv
+[0.863s] -- Up-to-date symlink: /ros2_ws/src/install/biped/share/biped/local_setup.bash
+[0.863s] -- Up-to-date symlink: /ros2_ws/src/install/biped/share/biped/local_setup.sh
+[0.864s] -- Up-to-date symlink: /ros2_ws/src/install/biped/share/biped/local_setup.zsh
+[0.864s] -- Up-to-date symlink: /ros2_ws/src/install/biped/share/biped/local_setup.dsv
+[0.864s] -- Symlinking: /ros2_ws/src/install/biped/share/biped/package.dsv
+[0.873s] -- Up-to-date symlink: /ros2_ws/src/install/biped/share/ament_index/resource_index/packages/biped
+[0.873s] -- Up-to-date symlink: /ros2_ws/src/install/biped/share/biped/cmake/bipedConfig.cmake
+[0.873s] -- Up-to-date symlink: /ros2_ws/src/install/biped/share/biped/cmake/bipedConfig-version.cmake
+[0.873s] -- Up-to-date symlink: /ros2_ws/src/install/biped/share/biped/package.xml
+[0.876s] Invoked command in '/ros2_ws/src/build/biped' returned '0': CMAKE_PREFIX_PATH=/ros2_ws/src/install/gz_ros2_control:/ros2_ws/src/install/gz_ros2_control_tests:/ros2_ws/src/install/gz_ros2_control_demos:/ros2_ws/src/install/biped:/opt/ros/humble /usr/bin/cmake --install /ros2_ws/src/build/biped

@@ -538,8 +538,8 @@
       effort="100"
       velocity="10" />
     <dynamics
-      damping="5"
-      friction="5" />
+      damping="0.5"
+      friction="0.1" />
   </joint>
 
 
@@ -649,13 +649,13 @@
           </joint>
       </ros2_control>
 
-
-      <xacro:if value="$(arg USE_WITH_SIM)">
-            <gazebo>
-                <plugin filename="gz_ros2_control-system" name="gz_ros2_control::GazeboSimROS2ControlPlugin">
-                    <parameters>$(find biped)/config/biped.yaml</parameters>
-                </plugin>
-            </gazebo>
-        </xacro:if>
+    <xacro:if value="$(arg USE_WITH_SIM)">
+      <gazebo>
+        <!-- Controller plugin -->
+        <plugin filename="gz_ros2_control-system" name="gz_ros2_control::GazeboSimROS2ControlPlugin">
+          <parameters>$(find biped)/config/biped.yaml</parameters>
+        </plugin>
+      </gazebo>
+    </xacro:if>
 
 </robot>

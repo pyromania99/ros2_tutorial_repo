@@ -21,5 +21,9 @@ install(
   OPTIONAL
 )
 
+install(
+  DIRECTORY src/
+  DESTINATION share/${PROJECT_NAME}/src
+)
 # Export the package
 ament_package()

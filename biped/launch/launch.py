@@ -1,28 +1,12 @@
 from launch import LaunchDescription
-from launch.actions import DeclareLaunchArgument, ExecuteProcess, TimerAction
-from launch.substitutions import LaunchConfiguration, Command
-from launch_ros.actions import Node
+from launch.actions import DeclareLaunchArgument, ExecuteProcess, IncludeLaunchDescription
+from launch.substitutions import LaunchConfiguration, Command, PathJoinSubstitution
 from launch.conditions import IfCondition
-from launch_ros.descriptions import ParameterValue
-from launch.substitutions import Command, LaunchConfiguration, PathJoinSubstitution
-from ament_index_python.packages import get_package_share_directory
-import os
-
-import datetime
-import os
-
-from ament_index_python.packages import get_package_share_directory
-
-from launch import LaunchDescription
-from launch.actions import DeclareLaunchArgument, RegisterEventHandler, Shutdown, SetEnvironmentVariable, IncludeLaunchDescription
-from launch.conditions import IfCondition, UnlessCondition
-from launch.event_handlers import OnProcessExit
-from launch.substitutions import Command, FindExecutable, LaunchConfiguration, PathJoinSubstitution, AndSubstitution, NotSubstitution
 from launch.launch_description_sources import PythonLaunchDescriptionSource
-
 from launch_ros.actions import Node
 from launch_ros.descriptions import ParameterValue
-from launch_ros.substitutions import FindPackageShare
+from ament_index_python.packages import get_package_share_directory
+import os
 
 def generate_launch_description():
     # Get package path
@@ -34,7 +18,8 @@ def generate_launch_description():
     # File paths
     urdf_path = os.path.join(pkg_path, 'urdf', 'biped.urdf.xacro')
     rviz_config_path = os.path.join(pkg_path, 'config', 'biped_config.rviz')
-    controller_config_path = PathJoinSubstitution([pkg_path, 'config','biped.yaml'])
+    controller_config_path = PathJoinSubstitution([pkg_path, 'config', 'biped.yaml'])
+    src_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'src'))
 
     # Launch arguments
     use_with_sim_arg = DeclareLaunchArgument('use_sim_time', default_value='true', description='Use simulation settings')
@@ -62,6 +47,7 @@ def generate_launch_description():
 
     # Joint State Publisher GUI (for debugging)
     joint_state_publisher_gui = Node(
+        condition=IfCondition(LaunchConfiguration('use_rviz')),
         package='joint_state_publisher_gui',
         executable='joint_state_publisher_gui',
         name='joint_state_publisher_gui',
@@ -84,7 +70,8 @@ def generate_launch_description():
                               'launch', 'gz_sim.launch.py')]),
             launch_arguments=[('gz_args', ['-r empty.sdf'])],
             condition=IfCondition(use_sim_time))
-# Bridge
+
+    # Bridge
     bridge = Node(
         package='ros_gz_bridge',
         executable='parameter_bridge',
@@ -92,8 +79,9 @@ def generate_launch_description():
         parameters=[
             {'use_sim_time': use_sim_time}],
         condition=IfCondition(use_sim_time),
-        arguments=['/clock@rosgraph_msgs/msg/Clock[gz.msgs.Clock' ]
+        arguments=['/clock@rosgraph_msgs/msg/Clock[gz.msgs.Clock']
     )
+
     spawn_entity = Node(
         package='ros_gz_sim',
         executable='create',
@@ -109,7 +97,6 @@ def generate_launch_description():
             '-topic', 'robot_description'],
     )
 
-    # Controller Manager
     controller_manager = Node(
         package='controller_manager',
         executable='ros2_control_node',
@@ -123,32 +110,40 @@ def generate_launch_description():
         output='screen'
     )
 
-    # Load controllers after a short delay
-    # load_controllers = TimerAction(
-    #     period=5.0,  # Wait 5 seconds before loading controllers
-    #     actions=[
-    #         Node(
-    #             package='controller_manager',
-    #             executable='spawner',
-    #             arguments=['joint_state_broadcaster'],
-    #             output='screen'
-    #         ),
-    #         Node(
-    #             package='controller_manager',
-    #             executable='spawner',
-    #             arguments=['biped_joint_controller'],
-    #             output='screen'
-    #         )
-    #     ]
-    # )
+    load_effort_controller = Node(
+        package='controller_manager',
+        executable='spawner',
+        parameters=[
+            {'use_sim_time': use_sim_time},
+        ],
+        arguments=['effort_controller','--inactive']
+    )
+
     load_controllers = Node(
         package='controller_manager',
         executable='spawner',
         parameters=[
             {'use_sim_time': use_sim_time},
         ],
-        arguments=['left_leg_joint_trajectory_controller']
+        arguments=['leg_joint_trajectory_controller']
     )
+    
+    load_joint_state_broadcaster = Node(
+        package='controller_manager',
+        executable='spawner',
+        parameters=[{'use_sim_time': use_sim_time}],
+        arguments=['joint_state_broadcaster'],
+        output='screen'
+    )
+    dynamic_python_scripts = []
+    for script in os.listdir(src_dir):
+        if script.endswith('.py'):  # Only include Python files
+            dynamic_python_scripts.append(
+                ExecuteProcess(
+                    cmd=['python3', os.path.join(src_dir, script)],
+                    output='screen'
+                )
+            )
 
     return LaunchDescription([
         use_with_sim_arg,
@@ -158,8 +153,12 @@ def generate_launch_description():
         gazebo,
         bridge,
         controller_manager,
+        load_effort_controller,
         robot_state_publisher,
+        load_joint_state_broadcaster,
         joint_state_publisher_gui,
         rviz_node,
-        load_controllers
+        load_controllers,
+        *dynamic_python_scripts  # Add dynamically discovered Python scripts
+
     ])

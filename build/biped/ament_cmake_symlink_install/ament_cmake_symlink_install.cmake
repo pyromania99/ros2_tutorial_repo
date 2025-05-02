@@ -316,6 +316,9 @@ ament_cmake_symlink_install_directory("/ros2_ws/src/biped" DIRECTORY "launch" "D
 # install(DIRECTORY "rviz" "urdf" "config" "worlds" "meshes" "DESTINATION" "share/biped" "OPTIONAL")
 ament_cmake_symlink_install_directory("/ros2_ws/src/biped" DIRECTORY "rviz" "urdf" "config" "worlds" "meshes" "DESTINATION" "share/biped" "OPTIONAL")
 
+# install(DIRECTORY "src/" "DESTINATION" "share/biped/src")
+ament_cmake_symlink_install_directory("/ros2_ws/src/biped" DIRECTORY "src/" "DESTINATION" "share/biped/src")
+
 # install(FILES "/ros2_ws/src/build/biped/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/biped" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 ament_cmake_symlink_install_files("/ros2_ws/src/biped" FILES "/ros2_ws/src/build/biped/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/biped" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 

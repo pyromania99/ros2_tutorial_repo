@@ -1,0 +1,378 @@
+[0.114s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install']
+[0.114s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=16, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7311f6418160>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7311f6598760>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7311f6598760>>, mixin_verb=('build',))
+[0.208s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.208s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.208s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.208s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.208s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.208s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.208s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/ros2_ws/src'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.216s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.216s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.216s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.216s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.216s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.216s] Level 1:colcon.colcon_core.package_identification:_identify(biped) by extensions ['ignore', 'ignore_ament_install']
+[0.216s] Level 1:colcon.colcon_core.package_identification:_identify(biped) by extension 'ignore'
+[0.216s] Level 1:colcon.colcon_core.package_identification:_identify(biped) by extension 'ignore_ament_install'
+[0.216s] Level 1:colcon.colcon_core.package_identification:_identify(biped) by extensions ['colcon_pkg']
+[0.216s] Level 1:colcon.colcon_core.package_identification:_identify(biped) by extension 'colcon_pkg'
+[0.217s] Level 1:colcon.colcon_core.package_identification:_identify(biped) by extensions ['colcon_meta']
+[0.217s] Level 1:colcon.colcon_core.package_identification:_identify(biped) by extension 'colcon_meta'
+[0.217s] Level 1:colcon.colcon_core.package_identification:_identify(biped) by extensions ['ros']
+[0.217s] Level 1:colcon.colcon_core.package_identification:_identify(biped) by extension 'ros'
+[0.218s] DEBUG:colcon.colcon_core.package_identification:Package 'biped' with type 'ros.ament_cmake' and name 'biped'
+[0.218s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(gz_ros2_control) by extensions ['ignore', 'ignore_ament_install']
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(gz_ros2_control) by extension 'ignore'
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(gz_ros2_control) by extension 'ignore_ament_install'
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(gz_ros2_control) by extensions ['colcon_pkg']
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(gz_ros2_control) by extension 'colcon_pkg'
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(gz_ros2_control) by extensions ['colcon_meta']
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(gz_ros2_control) by extension 'colcon_meta'
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(gz_ros2_control) by extensions ['ros']
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(gz_ros2_control) by extension 'ros'
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(gz_ros2_control) by extensions ['cmake', 'python']
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(gz_ros2_control) by extension 'cmake'
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(gz_ros2_control) by extension 'python'
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(gz_ros2_control) by extensions ['python_setup_py']
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(gz_ros2_control) by extension 'python_setup_py'
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(gz_ros2_control/Dockerfile) by extensions ['ignore', 'ignore_ament_install']
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(gz_ros2_control/Dockerfile) by extension 'ignore'
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(gz_ros2_control/Dockerfile) by extension 'ignore_ament_install'
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(gz_ros2_control/Dockerfile) by extensions ['colcon_pkg']
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(gz_ros2_control/Dockerfile) by extension 'colcon_pkg'
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(gz_ros2_control/Dockerfile) by extensions ['colcon_meta']
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(gz_ros2_control/Dockerfile) by extension 'colcon_meta'
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(gz_ros2_control/Dockerfile) by extensions ['ros']
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(gz_ros2_control/Dockerfile) by extension 'ros'
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(gz_ros2_control/Dockerfile) by extensions ['cmake', 'python']
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(gz_ros2_control/Dockerfile) by extension 'cmake'
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(gz_ros2_control/Dockerfile) by extension 'python'
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(gz_ros2_control/Dockerfile) by extensions ['python_setup_py']
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(gz_ros2_control/Dockerfile) by extension 'python_setup_py'
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(gz_ros2_control/doc) by extensions ['ignore', 'ignore_ament_install']
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(gz_ros2_control/doc) by extension 'ignore'
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(gz_ros2_control/doc) by extension 'ignore_ament_install'
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(gz_ros2_control/doc) by extensions ['colcon_pkg']
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(gz_ros2_control/doc) by extension 'colcon_pkg'
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(gz_ros2_control/doc) by extensions ['colcon_meta']
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(gz_ros2_control/doc) by extension 'colcon_meta'
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(gz_ros2_control/doc) by extensions ['ros']
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(gz_ros2_control/doc) by extension 'ros'
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(gz_ros2_control/doc) by extensions ['cmake', 'python']
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(gz_ros2_control/doc) by extension 'cmake'
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(gz_ros2_control/doc) by extension 'python'
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(gz_ros2_control/doc) by extensions ['python_setup_py']
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(gz_ros2_control/doc) by extension 'python_setup_py'
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(gz_ros2_control/doc/img) by extensions ['ignore', 'ignore_ament_install']
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(gz_ros2_control/doc/img) by extension 'ignore'
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(gz_ros2_control/doc/img) by extension 'ignore_ament_install'
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(gz_ros2_control/doc/img) by extensions ['colcon_pkg']
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(gz_ros2_control/doc/img) by extension 'colcon_pkg'
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(gz_ros2_control/doc/img) by extensions ['colcon_meta']
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(gz_ros2_control/doc/img) by extension 'colcon_meta'
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(gz_ros2_control/doc/img) by extensions ['ros']
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(gz_ros2_control/doc/img) by extension 'ros'
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(gz_ros2_control/doc/img) by extensions ['cmake', 'python']
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(gz_ros2_control/doc/img) by extension 'cmake'
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(gz_ros2_control/doc/img) by extension 'python'
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(gz_ros2_control/doc/img) by extensions ['python_setup_py']
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(gz_ros2_control/doc/img) by extension 'python_setup_py'
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(gz_ros2_control/gz_ros2_control) by extensions ['ignore', 'ignore_ament_install']
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(gz_ros2_control/gz_ros2_control) by extension 'ignore'
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(gz_ros2_control/gz_ros2_control) by extension 'ignore_ament_install'
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(gz_ros2_control/gz_ros2_control) by extensions ['colcon_pkg']
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(gz_ros2_control/gz_ros2_control) by extension 'colcon_pkg'
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(gz_ros2_control/gz_ros2_control) by extensions ['colcon_meta']
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(gz_ros2_control/gz_ros2_control) by extension 'colcon_meta'
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(gz_ros2_control/gz_ros2_control) by extensions ['ros']
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(gz_ros2_control/gz_ros2_control) by extension 'ros'
+[0.226s] DEBUG:colcon.colcon_core.package_identification:Package 'gz_ros2_control/gz_ros2_control' with type 'ros.ament_cmake' and name 'gz_ros2_control'
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(gz_ros2_control/gz_ros2_control_demos) by extensions ['ignore', 'ignore_ament_install']
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(gz_ros2_control/gz_ros2_control_demos) by extension 'ignore'
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(gz_ros2_control/gz_ros2_control_demos) by extension 'ignore_ament_install'
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(gz_ros2_control/gz_ros2_control_demos) by extensions ['colcon_pkg']
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(gz_ros2_control/gz_ros2_control_demos) by extension 'colcon_pkg'
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(gz_ros2_control/gz_ros2_control_demos) by extensions ['colcon_meta']
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(gz_ros2_control/gz_ros2_control_demos) by extension 'colcon_meta'
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(gz_ros2_control/gz_ros2_control_demos) by extensions ['ros']
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(gz_ros2_control/gz_ros2_control_demos) by extension 'ros'
+[0.227s] DEBUG:colcon.colcon_core.package_identification:Package 'gz_ros2_control/gz_ros2_control_demos' with type 'ros.ament_cmake' and name 'gz_ros2_control_demos'
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(gz_ros2_control/gz_ros2_control_tests) by extensions ['ignore', 'ignore_ament_install']
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(gz_ros2_control/gz_ros2_control_tests) by extension 'ignore'
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(gz_ros2_control/gz_ros2_control_tests) by extension 'ignore_ament_install'
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(gz_ros2_control/gz_ros2_control_tests) by extensions ['colcon_pkg']
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(gz_ros2_control/gz_ros2_control_tests) by extension 'colcon_pkg'
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(gz_ros2_control/gz_ros2_control_tests) by extensions ['colcon_meta']
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(gz_ros2_control/gz_ros2_control_tests) by extension 'colcon_meta'
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(gz_ros2_control/gz_ros2_control_tests) by extensions ['ros']
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(gz_ros2_control/gz_ros2_control_tests) by extension 'ros'
+[0.229s] DEBUG:colcon.colcon_core.package_identification:Package 'gz_ros2_control/gz_ros2_control_tests' with type 'ros.ament_cmake' and name 'gz_ros2_control_tests'
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.229s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.229s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.229s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.229s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.229s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.262s] Level 5:colcon.colcon_core.verb:set package 'gz_ros2_control' build argument 'cmake_args' from command line to 'None'
+[0.262s] Level 5:colcon.colcon_core.verb:set package 'gz_ros2_control' build argument 'cmake_target' from command line to 'None'
+[0.262s] Level 5:colcon.colcon_core.verb:set package 'gz_ros2_control' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.262s] Level 5:colcon.colcon_core.verb:set package 'gz_ros2_control' build argument 'cmake_clean_cache' from command line to 'False'
+[0.262s] Level 5:colcon.colcon_core.verb:set package 'gz_ros2_control' build argument 'cmake_clean_first' from command line to 'False'
+[0.262s] Level 5:colcon.colcon_core.verb:set package 'gz_ros2_control' build argument 'cmake_force_configure' from command line to 'False'
+[0.262s] Level 5:colcon.colcon_core.verb:set package 'gz_ros2_control' build argument 'ament_cmake_args' from command line to 'None'
+[0.262s] Level 5:colcon.colcon_core.verb:set package 'gz_ros2_control' build argument 'catkin_cmake_args' from command line to 'None'
+[0.262s] Level 5:colcon.colcon_core.verb:set package 'gz_ros2_control' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.262s] DEBUG:colcon.colcon_core.verb:Building package 'gz_ros2_control' with the following arguments: {'ament_cmake_args': None, 'build_base': '/ros2_ws/src/build/gz_ros2_control', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/ros2_ws/src/install/gz_ros2_control', 'merge_install': False, 'path': '/ros2_ws/src/gz_ros2_control/gz_ros2_control', 'symlink_install': True, 'test_result_base': None}
+[0.262s] Level 5:colcon.colcon_core.verb:set package 'biped' build argument 'cmake_args' from command line to 'None'
+[0.262s] Level 5:colcon.colcon_core.verb:set package 'biped' build argument 'cmake_target' from command line to 'None'
+[0.262s] Level 5:colcon.colcon_core.verb:set package 'biped' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.263s] Level 5:colcon.colcon_core.verb:set package 'biped' build argument 'cmake_clean_cache' from command line to 'False'
+[0.263s] Level 5:colcon.colcon_core.verb:set package 'biped' build argument 'cmake_clean_first' from command line to 'False'
+[0.263s] Level 5:colcon.colcon_core.verb:set package 'biped' build argument 'cmake_force_configure' from command line to 'False'
+[0.263s] Level 5:colcon.colcon_core.verb:set package 'biped' build argument 'ament_cmake_args' from command line to 'None'
+[0.263s] Level 5:colcon.colcon_core.verb:set package 'biped' build argument 'catkin_cmake_args' from command line to 'None'
+[0.263s] Level 5:colcon.colcon_core.verb:set package 'biped' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.263s] DEBUG:colcon.colcon_core.verb:Building package 'biped' with the following arguments: {'ament_cmake_args': None, 'build_base': '/ros2_ws/src/build/biped', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/ros2_ws/src/install/biped', 'merge_install': False, 'path': '/ros2_ws/src/biped', 'symlink_install': True, 'test_result_base': None}
+[0.263s] Level 5:colcon.colcon_core.verb:set package 'gz_ros2_control_demos' build argument 'cmake_args' from command line to 'None'
+[0.263s] Level 5:colcon.colcon_core.verb:set package 'gz_ros2_control_demos' build argument 'cmake_target' from command line to 'None'
+[0.263s] Level 5:colcon.colcon_core.verb:set package 'gz_ros2_control_demos' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.263s] Level 5:colcon.colcon_core.verb:set package 'gz_ros2_control_demos' build argument 'cmake_clean_cache' from command line to 'False'
+[0.263s] Level 5:colcon.colcon_core.verb:set package 'gz_ros2_control_demos' build argument 'cmake_clean_first' from command line to 'False'
+[0.263s] Level 5:colcon.colcon_core.verb:set package 'gz_ros2_control_demos' build argument 'cmake_force_configure' from command line to 'False'
+[0.263s] Level 5:colcon.colcon_core.verb:set package 'gz_ros2_control_demos' build argument 'ament_cmake_args' from command line to 'None'
+[0.263s] Level 5:colcon.colcon_core.verb:set package 'gz_ros2_control_demos' build argument 'catkin_cmake_args' from command line to 'None'
+[0.263s] Level 5:colcon.colcon_core.verb:set package 'gz_ros2_control_demos' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.263s] DEBUG:colcon.colcon_core.verb:Building package 'gz_ros2_control_demos' with the following arguments: {'ament_cmake_args': None, 'build_base': '/ros2_ws/src/build/gz_ros2_control_demos', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/ros2_ws/src/install/gz_ros2_control_demos', 'merge_install': False, 'path': '/ros2_ws/src/gz_ros2_control/gz_ros2_control_demos', 'symlink_install': True, 'test_result_base': None}
+[0.263s] Level 5:colcon.colcon_core.verb:set package 'gz_ros2_control_tests' build argument 'cmake_args' from command line to 'None'
+[0.263s] Level 5:colcon.colcon_core.verb:set package 'gz_ros2_control_tests' build argument 'cmake_target' from command line to 'None'
+[0.263s] Level 5:colcon.colcon_core.verb:set package 'gz_ros2_control_tests' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.263s] Level 5:colcon.colcon_core.verb:set package 'gz_ros2_control_tests' build argument 'cmake_clean_cache' from command line to 'False'
+[0.263s] Level 5:colcon.colcon_core.verb:set package 'gz_ros2_control_tests' build argument 'cmake_clean_first' from command line to 'False'
+[0.263s] Level 5:colcon.colcon_core.verb:set package 'gz_ros2_control_tests' build argument 'cmake_force_configure' from command line to 'False'
+[0.263s] Level 5:colcon.colcon_core.verb:set package 'gz_ros2_control_tests' build argument 'ament_cmake_args' from command line to 'None'
+[0.263s] Level 5:colcon.colcon_core.verb:set package 'gz_ros2_control_tests' build argument 'catkin_cmake_args' from command line to 'None'
+[0.263s] Level 5:colcon.colcon_core.verb:set package 'gz_ros2_control_tests' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.263s] DEBUG:colcon.colcon_core.verb:Building package 'gz_ros2_control_tests' with the following arguments: {'ament_cmake_args': None, 'build_base': '/ros2_ws/src/build/gz_ros2_control_tests', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/ros2_ws/src/install/gz_ros2_control_tests', 'merge_install': False, 'path': '/ros2_ws/src/gz_ros2_control/gz_ros2_control_tests', 'symlink_install': True, 'test_result_base': None}
+[0.263s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.264s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.264s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/ros2_ws/src/gz_ros2_control/gz_ros2_control' with build type 'ament_cmake'
+[0.265s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/ros2_ws/src/gz_ros2_control/gz_ros2_control'
+[0.267s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.267s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.267s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.277s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/ros2_ws/src/build/gz_ros2_control': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /ros2_ws/src/build/gz_ros2_control -- -j16 -l16
+[0.463s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/ros2_ws/src/build/gz_ros2_control' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /ros2_ws/src/build/gz_ros2_control -- -j16 -l16
+[0.475s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/ros2_ws/src/build/gz_ros2_control': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /ros2_ws/src/build/gz_ros2_control
+[0.505s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(gz_ros2_control)
+[0.506s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/ros2_ws/src/build/gz_ros2_control' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /ros2_ws/src/build/gz_ros2_control
+[0.509s] Level 1:colcon.colcon_core.environment:checking '/ros2_ws/src/install/gz_ros2_control' for CMake module files
+[0.510s] Level 1:colcon.colcon_core.environment:checking '/ros2_ws/src/install/gz_ros2_control' for CMake config files
+[0.510s] Level 1:colcon.colcon_core.shell:create_environment_hook('gz_ros2_control', 'cmake_prefix_path')
+[0.511s] INFO:colcon.colcon_core.shell:Creating environment hook '/ros2_ws/src/install/gz_ros2_control/share/gz_ros2_control/hook/cmake_prefix_path.ps1'
+[0.512s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/ros2_ws/src/install/gz_ros2_control/share/gz_ros2_control/hook/cmake_prefix_path.dsv'
+[0.514s] INFO:colcon.colcon_core.shell:Creating environment hook '/ros2_ws/src/install/gz_ros2_control/share/gz_ros2_control/hook/cmake_prefix_path.sh'
+[0.516s] Level 1:colcon.colcon_core.environment:checking '/ros2_ws/src/install/gz_ros2_control/lib'
+[0.516s] Level 1:colcon.colcon_core.shell:create_environment_hook('gz_ros2_control', 'ld_library_path_lib')
+[0.516s] INFO:colcon.colcon_core.shell:Creating environment hook '/ros2_ws/src/install/gz_ros2_control/share/gz_ros2_control/hook/ld_library_path_lib.ps1'
+[0.517s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/ros2_ws/src/install/gz_ros2_control/share/gz_ros2_control/hook/ld_library_path_lib.dsv'
+[0.517s] INFO:colcon.colcon_core.shell:Creating environment hook '/ros2_ws/src/install/gz_ros2_control/share/gz_ros2_control/hook/ld_library_path_lib.sh'
+[0.517s] Level 1:colcon.colcon_core.environment:checking '/ros2_ws/src/install/gz_ros2_control/bin'
+[0.517s] Level 1:colcon.colcon_core.environment:checking '/ros2_ws/src/install/gz_ros2_control/lib/pkgconfig/gz_ros2_control.pc'
+[0.520s] Level 1:colcon.colcon_core.environment:checking '/ros2_ws/src/install/gz_ros2_control/lib/python3.10/site-packages'
+[0.520s] Level 1:colcon.colcon_core.environment:checking '/ros2_ws/src/install/gz_ros2_control/bin'
+[0.520s] INFO:colcon.colcon_core.shell:Creating package script '/ros2_ws/src/install/gz_ros2_control/share/gz_ros2_control/package.ps1'
+[0.520s] INFO:colcon.colcon_core.shell:Creating package descriptor '/ros2_ws/src/install/gz_ros2_control/share/gz_ros2_control/package.dsv'
+[0.521s] INFO:colcon.colcon_core.shell:Creating package script '/ros2_ws/src/install/gz_ros2_control/share/gz_ros2_control/package.sh'
+[0.522s] INFO:colcon.colcon_core.shell:Creating package script '/ros2_ws/src/install/gz_ros2_control/share/gz_ros2_control/package.bash'
+[0.523s] INFO:colcon.colcon_core.shell:Creating package script '/ros2_ws/src/install/gz_ros2_control/share/gz_ros2_control/package.zsh'
+[0.524s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/ros2_ws/src/install/gz_ros2_control/share/colcon-core/packages/gz_ros2_control)
+[0.525s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(gz_ros2_control)
+[0.525s] Level 1:colcon.colcon_core.environment:checking '/ros2_ws/src/install/gz_ros2_control' for CMake module files
+[0.526s] Level 1:colcon.colcon_core.environment:checking '/ros2_ws/src/install/gz_ros2_control' for CMake config files
+[0.526s] Level 1:colcon.colcon_core.shell:create_environment_hook('gz_ros2_control', 'cmake_prefix_path')
+[0.527s] INFO:colcon.colcon_core.shell:Creating environment hook '/ros2_ws/src/install/gz_ros2_control/share/gz_ros2_control/hook/cmake_prefix_path.ps1'
+[0.528s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/ros2_ws/src/install/gz_ros2_control/share/gz_ros2_control/hook/cmake_prefix_path.dsv'
+[0.528s] INFO:colcon.colcon_core.shell:Creating environment hook '/ros2_ws/src/install/gz_ros2_control/share/gz_ros2_control/hook/cmake_prefix_path.sh'
+[0.529s] Level 1:colcon.colcon_core.environment:checking '/ros2_ws/src/install/gz_ros2_control/lib'
+[0.529s] Level 1:colcon.colcon_core.shell:create_environment_hook('gz_ros2_control', 'ld_library_path_lib')
+[0.530s] INFO:colcon.colcon_core.shell:Creating environment hook '/ros2_ws/src/install/gz_ros2_control/share/gz_ros2_control/hook/ld_library_path_lib.ps1'
+[0.530s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/ros2_ws/src/install/gz_ros2_control/share/gz_ros2_control/hook/ld_library_path_lib.dsv'
+[0.531s] INFO:colcon.colcon_core.shell:Creating environment hook '/ros2_ws/src/install/gz_ros2_control/share/gz_ros2_control/hook/ld_library_path_lib.sh'
+[0.531s] Level 1:colcon.colcon_core.environment:checking '/ros2_ws/src/install/gz_ros2_control/bin'
+[0.531s] Level 1:colcon.colcon_core.environment:checking '/ros2_ws/src/install/gz_ros2_control/lib/pkgconfig/gz_ros2_control.pc'
+[0.531s] Level 1:colcon.colcon_core.environment:checking '/ros2_ws/src/install/gz_ros2_control/lib/python3.10/site-packages'
+[0.531s] Level 1:colcon.colcon_core.environment:checking '/ros2_ws/src/install/gz_ros2_control/bin'
+[0.532s] INFO:colcon.colcon_core.shell:Creating package script '/ros2_ws/src/install/gz_ros2_control/share/gz_ros2_control/package.ps1'
+[0.532s] INFO:colcon.colcon_core.shell:Creating package descriptor '/ros2_ws/src/install/gz_ros2_control/share/gz_ros2_control/package.dsv'
+[0.533s] INFO:colcon.colcon_core.shell:Creating package script '/ros2_ws/src/install/gz_ros2_control/share/gz_ros2_control/package.sh'
+[0.533s] INFO:colcon.colcon_core.shell:Creating package script '/ros2_ws/src/install/gz_ros2_control/share/gz_ros2_control/package.bash'
+[0.533s] INFO:colcon.colcon_core.shell:Creating package script '/ros2_ws/src/install/gz_ros2_control/share/gz_ros2_control/package.zsh'
+[0.533s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/ros2_ws/src/install/gz_ros2_control/share/colcon-core/packages/gz_ros2_control)
+[0.534s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/ros2_ws/src/biped' with build type 'ament_cmake'
+[0.534s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/ros2_ws/src/biped'
+[0.534s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.534s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.538s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/ros2_ws/src/gz_ros2_control/gz_ros2_control_demos' with build type 'ament_cmake'
+[0.538s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/ros2_ws/src/gz_ros2_control/gz_ros2_control_demos'
+[0.538s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.538s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.541s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/ros2_ws/src/gz_ros2_control/gz_ros2_control_tests' with build type 'ament_cmake'
+[0.541s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/ros2_ws/src/gz_ros2_control/gz_ros2_control_tests'
+[0.541s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.542s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.549s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/ros2_ws/src/build/biped': AMENT_PREFIX_PATH=/ros2_ws/src/install/gz_ros2_control:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ros2_ws/src/install/gz_ros2_control:/opt/ros/humble LD_LIBRARY_PATH=/ros2_ws/src/install/gz_ros2_control/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --build /ros2_ws/src/build/biped -- -j16 -l16
+[0.555s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/ros2_ws/src/build/gz_ros2_control_demos': AMENT_PREFIX_PATH=/ros2_ws/src/install/gz_ros2_control:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ros2_ws/src/install/gz_ros2_control:/opt/ros/humble LD_LIBRARY_PATH=/ros2_ws/src/install/gz_ros2_control/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --build /ros2_ws/src/build/gz_ros2_control_demos -- -j16 -l16
+[0.560s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/ros2_ws/src/build/gz_ros2_control_tests': AMENT_PREFIX_PATH=/ros2_ws/src/install/gz_ros2_control:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ros2_ws/src/install/gz_ros2_control:/opt/ros/humble LD_LIBRARY_PATH=/ros2_ws/src/install/gz_ros2_control/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --build /ros2_ws/src/build/gz_ros2_control_tests -- -j16 -l16
+[0.623s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/ros2_ws/src/build/biped' returned '0': AMENT_PREFIX_PATH=/ros2_ws/src/install/gz_ros2_control:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ros2_ws/src/install/gz_ros2_control:/opt/ros/humble LD_LIBRARY_PATH=/ros2_ws/src/install/gz_ros2_control/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --build /ros2_ws/src/build/biped -- -j16 -l16
+[0.627s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/ros2_ws/src/build/biped': AMENT_PREFIX_PATH=/ros2_ws/src/install/gz_ros2_control:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ros2_ws/src/install/gz_ros2_control:/opt/ros/humble LD_LIBRARY_PATH=/ros2_ws/src/install/gz_ros2_control/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --install /ros2_ws/src/build/biped
+[0.660s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/ros2_ws/src/build/gz_ros2_control_demos' returned '0': AMENT_PREFIX_PATH=/ros2_ws/src/install/gz_ros2_control:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ros2_ws/src/install/gz_ros2_control:/opt/ros/humble LD_LIBRARY_PATH=/ros2_ws/src/install/gz_ros2_control/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --build /ros2_ws/src/build/gz_ros2_control_demos -- -j16 -l16
+[0.663s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/ros2_ws/src/build/gz_ros2_control_demos': AMENT_PREFIX_PATH=/ros2_ws/src/install/gz_ros2_control:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ros2_ws/src/install/gz_ros2_control:/opt/ros/humble LD_LIBRARY_PATH=/ros2_ws/src/install/gz_ros2_control/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --install /ros2_ws/src/build/gz_ros2_control_demos
+[0.664s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(biped)
+[0.665s] Level 1:colcon.colcon_core.environment:checking '/ros2_ws/src/install/biped' for CMake module files
+[0.666s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/ros2_ws/src/build/biped' returned '0': AMENT_PREFIX_PATH=/ros2_ws/src/install/gz_ros2_control:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ros2_ws/src/install/gz_ros2_control:/opt/ros/humble LD_LIBRARY_PATH=/ros2_ws/src/install/gz_ros2_control/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --install /ros2_ws/src/build/biped
+[0.667s] Level 1:colcon.colcon_core.environment:checking '/ros2_ws/src/install/biped' for CMake config files
+[0.668s] Level 1:colcon.colcon_core.shell:create_environment_hook('biped', 'cmake_prefix_path')
+[0.668s] INFO:colcon.colcon_core.shell:Creating environment hook '/ros2_ws/src/install/biped/share/biped/hook/cmake_prefix_path.ps1'
+[0.671s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/ros2_ws/src/install/biped/share/biped/hook/cmake_prefix_path.dsv'
+[0.671s] INFO:colcon.colcon_core.shell:Creating environment hook '/ros2_ws/src/install/biped/share/biped/hook/cmake_prefix_path.sh'
+[0.672s] Level 1:colcon.colcon_core.environment:checking '/ros2_ws/src/install/biped/bin'
+[0.672s] Level 1:colcon.colcon_core.environment:checking '/ros2_ws/src/install/biped/lib/pkgconfig/biped.pc'
+[0.672s] Level 1:colcon.colcon_core.environment:checking '/ros2_ws/src/install/biped/lib/python3.10/site-packages'
+[0.672s] Level 1:colcon.colcon_core.environment:checking '/ros2_ws/src/install/biped/bin'
+[0.672s] INFO:colcon.colcon_core.shell:Creating package script '/ros2_ws/src/install/biped/share/biped/package.ps1'
+[0.673s] INFO:colcon.colcon_core.shell:Creating package descriptor '/ros2_ws/src/install/biped/share/biped/package.dsv'
+[0.673s] INFO:colcon.colcon_core.shell:Creating package script '/ros2_ws/src/install/biped/share/biped/package.sh'
+[0.673s] INFO:colcon.colcon_core.shell:Creating package script '/ros2_ws/src/install/biped/share/biped/package.bash'
+[0.674s] INFO:colcon.colcon_core.shell:Creating package script '/ros2_ws/src/install/biped/share/biped/package.zsh'
+[0.674s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/ros2_ws/src/install/biped/share/colcon-core/packages/biped)
+[0.674s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(biped)
+[0.674s] Level 1:colcon.colcon_core.environment:checking '/ros2_ws/src/install/biped' for CMake module files
+[0.675s] Level 1:colcon.colcon_core.environment:checking '/ros2_ws/src/install/biped' for CMake config files
+[0.675s] Level 1:colcon.colcon_core.shell:create_environment_hook('biped', 'cmake_prefix_path')
+[0.675s] INFO:colcon.colcon_core.shell:Creating environment hook '/ros2_ws/src/install/biped/share/biped/hook/cmake_prefix_path.ps1'
+[0.676s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/ros2_ws/src/install/biped/share/biped/hook/cmake_prefix_path.dsv'
+[0.676s] INFO:colcon.colcon_core.shell:Creating environment hook '/ros2_ws/src/install/biped/share/biped/hook/cmake_prefix_path.sh'
+[0.677s] Level 1:colcon.colcon_core.environment:checking '/ros2_ws/src/install/biped/bin'
+[0.677s] Level 1:colcon.colcon_core.environment:checking '/ros2_ws/src/install/biped/lib/pkgconfig/biped.pc'
+[0.677s] Level 1:colcon.colcon_core.environment:checking '/ros2_ws/src/install/biped/lib/python3.10/site-packages'
+[0.677s] Level 1:colcon.colcon_core.environment:checking '/ros2_ws/src/install/biped/bin'
+[0.677s] INFO:colcon.colcon_core.shell:Creating package script '/ros2_ws/src/install/biped/share/biped/package.ps1'
+[0.679s] INFO:colcon.colcon_core.shell:Creating package descriptor '/ros2_ws/src/install/biped/share/biped/package.dsv'
+[0.683s] INFO:colcon.colcon_core.shell:Creating package script '/ros2_ws/src/install/biped/share/biped/package.sh'
+[0.683s] INFO:colcon.colcon_core.shell:Creating package script '/ros2_ws/src/install/biped/share/biped/package.bash'
+[0.684s] INFO:colcon.colcon_core.shell:Creating package script '/ros2_ws/src/install/biped/share/biped/package.zsh'
+[0.685s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/ros2_ws/src/install/biped/share/colcon-core/packages/biped)
+[0.689s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/ros2_ws/src/build/gz_ros2_control_tests' returned '0': AMENT_PREFIX_PATH=/ros2_ws/src/install/gz_ros2_control:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ros2_ws/src/install/gz_ros2_control:/opt/ros/humble LD_LIBRARY_PATH=/ros2_ws/src/install/gz_ros2_control/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --build /ros2_ws/src/build/gz_ros2_control_tests -- -j16 -l16
+[0.689s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/ros2_ws/src/build/gz_ros2_control_tests': AMENT_PREFIX_PATH=/ros2_ws/src/install/gz_ros2_control:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ros2_ws/src/install/gz_ros2_control:/opt/ros/humble LD_LIBRARY_PATH=/ros2_ws/src/install/gz_ros2_control/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --install /ros2_ws/src/build/gz_ros2_control_tests
+[0.701s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(gz_ros2_control_demos)
+[0.702s] Level 1:colcon.colcon_core.environment:checking '/ros2_ws/src/install/gz_ros2_control_demos' for CMake module files
+[0.703s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/ros2_ws/src/build/gz_ros2_control_demos' returned '0': AMENT_PREFIX_PATH=/ros2_ws/src/install/gz_ros2_control:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ros2_ws/src/install/gz_ros2_control:/opt/ros/humble LD_LIBRARY_PATH=/ros2_ws/src/install/gz_ros2_control/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --install /ros2_ws/src/build/gz_ros2_control_demos
+[0.703s] Level 1:colcon.colcon_core.environment:checking '/ros2_ws/src/install/gz_ros2_control_demos' for CMake config files
+[0.703s] Level 1:colcon.colcon_core.shell:create_environment_hook('gz_ros2_control_demos', 'cmake_prefix_path')
+[0.703s] INFO:colcon.colcon_core.shell:Creating environment hook '/ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos/hook/cmake_prefix_path.ps1'
+[0.704s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos/hook/cmake_prefix_path.dsv'
+[0.705s] INFO:colcon.colcon_core.shell:Creating environment hook '/ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos/hook/cmake_prefix_path.sh'
+[0.705s] Level 1:colcon.colcon_core.environment:checking '/ros2_ws/src/install/gz_ros2_control_demos/lib'
+[0.705s] Level 1:colcon.colcon_core.environment:checking '/ros2_ws/src/install/gz_ros2_control_demos/bin'
+[0.705s] Level 1:colcon.colcon_core.environment:checking '/ros2_ws/src/install/gz_ros2_control_demos/lib/pkgconfig/gz_ros2_control_demos.pc'
+[0.706s] Level 1:colcon.colcon_core.environment:checking '/ros2_ws/src/install/gz_ros2_control_demos/lib/python3.10/site-packages'
+[0.706s] Level 1:colcon.colcon_core.environment:checking '/ros2_ws/src/install/gz_ros2_control_demos/bin'
+[0.706s] INFO:colcon.colcon_core.shell:Creating package script '/ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos/package.ps1'
+[0.706s] INFO:colcon.colcon_core.shell:Creating package descriptor '/ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos/package.dsv'
+[0.707s] INFO:colcon.colcon_core.shell:Creating package script '/ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos/package.sh'
+[0.707s] INFO:colcon.colcon_core.shell:Creating package script '/ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos/package.bash'
+[0.708s] INFO:colcon.colcon_core.shell:Creating package script '/ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos/package.zsh'
+[0.708s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/ros2_ws/src/install/gz_ros2_control_demos/share/colcon-core/packages/gz_ros2_control_demos)
+[0.709s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(gz_ros2_control_demos)
+[0.709s] Level 1:colcon.colcon_core.environment:checking '/ros2_ws/src/install/gz_ros2_control_demos' for CMake module files
+[0.710s] Level 1:colcon.colcon_core.environment:checking '/ros2_ws/src/install/gz_ros2_control_demos' for CMake config files
+[0.710s] Level 1:colcon.colcon_core.shell:create_environment_hook('gz_ros2_control_demos', 'cmake_prefix_path')
+[0.711s] INFO:colcon.colcon_core.shell:Creating environment hook '/ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos/hook/cmake_prefix_path.ps1'
+[0.712s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos/hook/cmake_prefix_path.dsv'
+[0.714s] INFO:colcon.colcon_core.shell:Creating environment hook '/ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos/hook/cmake_prefix_path.sh'
+[0.719s] Level 1:colcon.colcon_core.environment:checking '/ros2_ws/src/install/gz_ros2_control_demos/lib'
+[0.719s] Level 1:colcon.colcon_core.environment:checking '/ros2_ws/src/install/gz_ros2_control_demos/bin'
+[0.719s] Level 1:colcon.colcon_core.environment:checking '/ros2_ws/src/install/gz_ros2_control_demos/lib/pkgconfig/gz_ros2_control_demos.pc'
+[0.720s] Level 1:colcon.colcon_core.environment:checking '/ros2_ws/src/install/gz_ros2_control_demos/lib/python3.10/site-packages'
+[0.720s] Level 1:colcon.colcon_core.environment:checking '/ros2_ws/src/install/gz_ros2_control_demos/bin'
+[0.721s] INFO:colcon.colcon_core.shell:Creating package script '/ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos/package.ps1'
+[0.728s] INFO:colcon.colcon_core.shell:Creating package descriptor '/ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos/package.dsv'
+[0.729s] INFO:colcon.colcon_core.shell:Creating package script '/ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos/package.sh'
+[0.730s] INFO:colcon.colcon_core.shell:Creating package script '/ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos/package.bash'
+[0.731s] INFO:colcon.colcon_core.shell:Creating package script '/ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos/package.zsh'
+[0.731s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/ros2_ws/src/install/gz_ros2_control_demos/share/colcon-core/packages/gz_ros2_control_demos)
+[0.735s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(gz_ros2_control_tests)
+[0.735s] Level 1:colcon.colcon_core.environment:checking '/ros2_ws/src/install/gz_ros2_control_tests' for CMake module files
+[0.736s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/ros2_ws/src/build/gz_ros2_control_tests' returned '0': AMENT_PREFIX_PATH=/ros2_ws/src/install/gz_ros2_control:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/ros2_ws/src/install/gz_ros2_control:/opt/ros/humble LD_LIBRARY_PATH=/ros2_ws/src/install/gz_ros2_control/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --install /ros2_ws/src/build/gz_ros2_control_tests
+[0.736s] Level 1:colcon.colcon_core.environment:checking '/ros2_ws/src/install/gz_ros2_control_tests' for CMake config files
+[0.736s] Level 1:colcon.colcon_core.shell:create_environment_hook('gz_ros2_control_tests', 'cmake_prefix_path')
+[0.736s] INFO:colcon.colcon_core.shell:Creating environment hook '/ros2_ws/src/install/gz_ros2_control_tests/share/gz_ros2_control_tests/hook/cmake_prefix_path.ps1'
+[0.737s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/ros2_ws/src/install/gz_ros2_control_tests/share/gz_ros2_control_tests/hook/cmake_prefix_path.dsv'
+[0.737s] INFO:colcon.colcon_core.shell:Creating environment hook '/ros2_ws/src/install/gz_ros2_control_tests/share/gz_ros2_control_tests/hook/cmake_prefix_path.sh'
+[0.738s] Level 1:colcon.colcon_core.environment:checking '/ros2_ws/src/install/gz_ros2_control_tests/lib'
+[0.738s] Level 1:colcon.colcon_core.environment:checking '/ros2_ws/src/install/gz_ros2_control_tests/bin'
+[0.738s] Level 1:colcon.colcon_core.environment:checking '/ros2_ws/src/install/gz_ros2_control_tests/lib/pkgconfig/gz_ros2_control_tests.pc'
+[0.738s] Level 1:colcon.colcon_core.environment:checking '/ros2_ws/src/install/gz_ros2_control_tests/lib/python3.10/site-packages'
+[0.738s] Level 1:colcon.colcon_core.environment:checking '/ros2_ws/src/install/gz_ros2_control_tests/bin'
+[0.738s] INFO:colcon.colcon_core.shell:Creating package script '/ros2_ws/src/install/gz_ros2_control_tests/share/gz_ros2_control_tests/package.ps1'
+[0.739s] INFO:colcon.colcon_core.shell:Creating package descriptor '/ros2_ws/src/install/gz_ros2_control_tests/share/gz_ros2_control_tests/package.dsv'
+[0.739s] INFO:colcon.colcon_core.shell:Creating package script '/ros2_ws/src/install/gz_ros2_control_tests/share/gz_ros2_control_tests/package.sh'
+[0.739s] INFO:colcon.colcon_core.shell:Creating package script '/ros2_ws/src/install/gz_ros2_control_tests/share/gz_ros2_control_tests/package.bash'
+[0.740s] INFO:colcon.colcon_core.shell:Creating package script '/ros2_ws/src/install/gz_ros2_control_tests/share/gz_ros2_control_tests/package.zsh'
+[0.740s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/ros2_ws/src/install/gz_ros2_control_tests/share/colcon-core/packages/gz_ros2_control_tests)
+[0.740s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(gz_ros2_control_tests)
+[0.740s] Level 1:colcon.colcon_core.environment:checking '/ros2_ws/src/install/gz_ros2_control_tests' for CMake module files
+[0.741s] Level 1:colcon.colcon_core.environment:checking '/ros2_ws/src/install/gz_ros2_control_tests' for CMake config files
+[0.741s] Level 1:colcon.colcon_core.shell:create_environment_hook('gz_ros2_control_tests', 'cmake_prefix_path')
+[0.741s] INFO:colcon.colcon_core.shell:Creating environment hook '/ros2_ws/src/install/gz_ros2_control_tests/share/gz_ros2_control_tests/hook/cmake_prefix_path.ps1'
+[0.742s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/ros2_ws/src/install/gz_ros2_control_tests/share/gz_ros2_control_tests/hook/cmake_prefix_path.dsv'
+[0.742s] INFO:colcon.colcon_core.shell:Creating environment hook '/ros2_ws/src/install/gz_ros2_control_tests/share/gz_ros2_control_tests/hook/cmake_prefix_path.sh'
+[0.742s] Level 1:colcon.colcon_core.environment:checking '/ros2_ws/src/install/gz_ros2_control_tests/lib'
+[0.742s] Level 1:colcon.colcon_core.environment:checking '/ros2_ws/src/install/gz_ros2_control_tests/bin'
+[0.742s] Level 1:colcon.colcon_core.environment:checking '/ros2_ws/src/install/gz_ros2_control_tests/lib/pkgconfig/gz_ros2_control_tests.pc'
+[0.743s] Level 1:colcon.colcon_core.environment:checking '/ros2_ws/src/install/gz_ros2_control_tests/lib/python3.10/site-packages'
+[0.743s] Level 1:colcon.colcon_core.environment:checking '/ros2_ws/src/install/gz_ros2_control_tests/bin'
+[0.743s] INFO:colcon.colcon_core.shell:Creating package script '/ros2_ws/src/install/gz_ros2_control_tests/share/gz_ros2_control_tests/package.ps1'
+[0.744s] INFO:colcon.colcon_core.shell:Creating package descriptor '/ros2_ws/src/install/gz_ros2_control_tests/share/gz_ros2_control_tests/package.dsv'
+[0.744s] INFO:colcon.colcon_core.shell:Creating package script '/ros2_ws/src/install/gz_ros2_control_tests/share/gz_ros2_control_tests/package.sh'
+[0.745s] INFO:colcon.colcon_core.shell:Creating package script '/ros2_ws/src/install/gz_ros2_control_tests/share/gz_ros2_control_tests/package.bash'
+[0.745s] INFO:colcon.colcon_core.shell:Creating package script '/ros2_ws/src/install/gz_ros2_control_tests/share/gz_ros2_control_tests/package.zsh'
+[0.745s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/ros2_ws/src/install/gz_ros2_control_tests/share/colcon-core/packages/gz_ros2_control_tests)
+[0.745s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[0.746s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[0.746s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[0.746s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[0.757s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[0.757s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[0.758s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[0.758s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[0.764s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.Spawn.ExecFailed: /usr/bin/dbus-launch terminated abnormally without any error message
+[0.765s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[0.766s] INFO:colcon.colcon_core.shell:Creating prefix script '/ros2_ws/src/install/local_setup.ps1'
+[0.768s] INFO:colcon.colcon_core.shell:Creating prefix util module '/ros2_ws/src/install/_local_setup_util_ps1.py'
+[0.770s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/ros2_ws/src/install/setup.ps1'
+[0.772s] INFO:colcon.colcon_core.shell:Creating prefix script '/ros2_ws/src/install/local_setup.sh'
+[0.774s] INFO:colcon.colcon_core.shell:Creating prefix util module '/ros2_ws/src/install/_local_setup_util_sh.py'
+[0.775s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/ros2_ws/src/install/setup.sh'
+[0.777s] INFO:colcon.colcon_core.shell:Creating prefix script '/ros2_ws/src/install/local_setup.bash'
+[0.778s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/ros2_ws/src/install/setup.bash'
+[0.780s] INFO:colcon.colcon_core.shell:Creating prefix script '/ros2_ws/src/install/local_setup.zsh'
+[0.783s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/ros2_ws/src/install/setup.zsh'
