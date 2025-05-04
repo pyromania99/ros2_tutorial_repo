@@ -2,6 +2,7 @@
 /ros2_ws/src/install/biped/share/biped/urdf/biped.urdf
 /ros2_ws/src/install/biped/share/biped/urdf/biped.urdf.xacro
 /ros2_ws/src/install/biped/share/biped/urdf/common.xacro
+/ros2_ws/src/install/biped/share/biped/config/asmc.yaml
 /ros2_ws/src/install/biped/share/biped/config/biped.yaml
 /ros2_ws/src/install/biped/share/biped/config/biped_config.rviz
 /ros2_ws/src/install/biped/share/biped/config/biped_controller.yaml
@@ -15,8 +16,7 @@
 /ros2_ws/src/install/biped/share/biped/meshes/right_hip1.stl
 /ros2_ws/src/install/biped/share/biped/meshes/right_tibia.stl
 /ros2_ws/src/install/biped/share/biped/src/controller_switcher.py
-/ros2_ws/src/install/biped/share/biped/src/effort_pid.py
-/ros2_ws/src/install/biped/share/biped/src/effort_slider_gui.py
+/ros2_ws/src/install/biped/share/biped/src/effort_asmc.py
 /ros2_ws/src/install/biped/share/biped/src/leg_slider_gui.py
 /ros2_ws/src/install/biped/share/ament_index/resource_index/package_run_dependencies/biped
 /ros2_ws/src/install/biped/share/ament_index/resource_index/parent_prefix_path/biped

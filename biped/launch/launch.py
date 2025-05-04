@@ -1,6 +1,6 @@
 from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument, ExecuteProcess, IncludeLaunchDescription
-from launch.substitutions import LaunchConfiguration, Command, PathJoinSubstitution
+from launch.substitutions import LaunchConfiguration, Command, PathJoinSubstitution ,PythonExpression
 from launch.conditions import IfCondition, UnlessCondition
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch_ros.actions import Node
@@ -22,11 +22,20 @@ def generate_launch_description():
     src_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'src'))
 
     # Launch arguments
-    use_with_sim_arg = DeclareLaunchArgument('use_sim_time', default_value='true', description='Use simulation settings')
-    use_rviz_arg = DeclareLaunchArgument('use_rviz', default_value='true', description='Launch RViz')
-    use_gazebo_arg = DeclareLaunchArgument('use_gazebo', default_value='false', description='Launch Gazebo')
+    use_with_sim_arg = DeclareLaunchArgument('use_sim_time', default_value='True', description='Use simulation settings')
+    use_rviz_arg = DeclareLaunchArgument('use_rviz', default_value='False', description='Launch RViz')
+    use_gazebo_arg = DeclareLaunchArgument('use_gazebo', default_value='True', description='Launch Gazebo')
 
     use_sim_time = LaunchConfiguration('use_sim_time')
+    # asmc_config_path = os.path.join(pkg_path, 'config', 'asmc_config.yaml')
+
+    # asmc_node = Node(
+    #     package='biped',
+    #     executable='asmc_effort_publisher',
+    #     name='asmc_effort_publisher',
+    #     output='screen',
+    #     parameters=[asmc_config_path]
+    # )
 
     # Robot State Publisher
     robot_state_publisher = Node(
@@ -47,7 +56,9 @@ def generate_launch_description():
 
     # Joint State Publisher GUI (for debugging)
     joint_state_publisher_gui = Node(
-        condition=UnlessCondition(LaunchConfiguration('use_gazebo')),  # <-- safer than use_sim_time here
+        condition=IfCondition(PythonExpression([
+            LaunchConfiguration('use_rviz'), ' and not ', LaunchConfiguration('use_gazebo')
+        ])),
         package='joint_state_publisher_gui',
         executable='joint_state_publisher_gui',
         name='joint_state_publisher_gui',
@@ -160,6 +171,7 @@ def generate_launch_description():
         bridge,
         controller_manager,
         load_effort_controller,
+        # asmc_node,  
         robot_state_publisher,
         load_joint_state_broadcaster,
         joint_state_publisher_gui,

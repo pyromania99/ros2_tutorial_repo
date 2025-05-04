@@ -31,6 +31,7 @@ class PIDController:
         return output
 
 class PIDEffortPublisher(Node):
+    
     def __init__(self):
         super().__init__('pid_effort_publisher')
 
@@ -44,16 +45,23 @@ class PIDEffortPublisher(Node):
         ]
 
         self.current_positions = {name: 0.0 for name in self.joint_names}
-        self.target_positions = {name: 0.0 for name in self.joint_names}  # Set your desired targets here
+        self.target_positions = {name: 0.0 for name in self.joint_names}
 
         self.pid_controllers = {
-            name: PIDController(10.0, 0.0, 0.5) for name in self.joint_names
+            name: PIDController(50.0, 0.0, 0) for name in self.joint_names
         }
 
         self.subscription = self.create_subscription(
             JointState,
             '/joint_states',
             self.joint_state_callback,
+            10
+        )
+
+        self.target_sub = self.create_subscription(
+            Float64MultiArray,
+            '/target_positions',
+            self.target_callback,
             10
         )
 
@@ -64,6 +72,13 @@ class PIDEffortPublisher(Node):
         )
 
         self.timer = self.create_timer(0.02, self.control_loop)  # 50 Hz
+
+    def target_callback(self, msg):
+        if len(msg.data) != len(self.joint_names):
+            self.get_logger().warn('Received target_positions length mismatch')
+            return
+        for i, name in enumerate(self.joint_names):
+            self.target_positions[name] = msg.data[i]
 
     def joint_state_callback(self, msg):
         for name, pos in zip(msg.name, msg.position):
