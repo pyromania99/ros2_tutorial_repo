@@ -131,7 +131,7 @@ def generate_launch_description():
         parameters=[
             {'use_sim_time': use_sim_time},
         ],
-        arguments=['effort_controller','--inactive']
+        arguments=['effort_controller']
     )
 
     load_controllers = Node(
@@ -140,7 +140,7 @@ def generate_launch_description():
         parameters=[
             {'use_sim_time': use_sim_time},
         ],
-        arguments=['leg_joint_trajectory_controller']
+        arguments=['leg_joint_trajectory_controller','--inactive']
     )
     
     load_joint_state_broadcaster = Node(

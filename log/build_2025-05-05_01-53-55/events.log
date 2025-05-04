@@ -1,0 +1,581 @@
+[0.000000] (-) TimerEvent: {}
+[0.000165] (gz_ros2_control) JobQueued: {'identifier': 'gz_ros2_control', 'dependencies': OrderedDict()}
+[0.000233] (biped) JobQueued: {'identifier': 'biped', 'dependencies': OrderedDict([('gz_ros2_control', '/ros2_ws/src/install/gz_ros2_control')])}
+[0.000277] (gz_ros2_control_demos) JobQueued: {'identifier': 'gz_ros2_control_demos', 'dependencies': OrderedDict([('gz_ros2_control', '/ros2_ws/src/install/gz_ros2_control')])}
+[0.000332] (gz_ros2_control_tests) JobQueued: {'identifier': 'gz_ros2_control_tests', 'dependencies': OrderedDict([('gz_ros2_control', '/ros2_ws/src/install/gz_ros2_control')])}
+[0.000367] (gz_ros2_control) JobStarted: {'identifier': 'gz_ros2_control'}
+[0.007683] (gz_ros2_control) JobProgress: {'identifier': 'gz_ros2_control', 'progress': 'cmake'}
+[0.008254] (gz_ros2_control) JobProgress: {'identifier': 'gz_ros2_control', 'progress': 'build'}
+[0.008820] (gz_ros2_control) Command: {'cmd': ['/usr/bin/cmake', '--build', '/ros2_ws/src/build/gz_ros2_control', '--', '-j16', '-l16'], 'cwd': '/ros2_ws/src/build/gz_ros2_control', 'env': OrderedDict([('HOSTNAME', 'Pyro'), ('GIT_ASKPASS', '/vscode/vscode-server/bin/linux-x64/17baf841131aa23349f217ca7c570c76ee87b957/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LIBGL_ALWAYS_SOFTWARE', '1'), ('LD_LIBRARY_PATH', '/ros2_ws/src/install/gz_ros2_control/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/vscode/vscode-server/bin/linux-x64/17baf841131aa23349f217ca7c570c76ee87b957/bin/helpers/browser.sh'), ('HOME', '/home/container_user'), ('TERM_PROGRAM_VERSION', '1.99.3'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-46672e09-362e-4b73-ad29-3ad405fd7764.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/vscode/vscode-server/bin/linux-x64/17baf841131aa23349f217ca7c570c76ee87b957/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/vscode/vscode-server/bin/linux-x64/17baf841131aa23349f217ca7c570c76ee87b957/node'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('BUNDLED_DEBUGPY_PATH', '/home/container_user/.vscode-server/extensions/ms-python.debugpy-2025.6.0/bundled/libs/debugpy'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('WAYLAND_DISPLAY', ''), ('COLCON_PREFIX_PATH', '/ros2_ws/src/install'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-b170eadf-5801-48f8-9b97-59e35bffbf5d.sock'), ('PULSE_SERVER', ''), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/vscode/vscode-server/bin/linux-x64/17baf841131aa23349f217ca7c570c76ee87b957/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/container_user/.vscode-server/extensions/ms-python.debugpy-2025.6.0/bundled/scripts/noConfigScripts:/home/container_user/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-b170eadf-5801-48f8-9b97-59e35bffbf5d.sock","/run/user/1000/gnupg/S.gpg-agent"]'), ('DISPLAY', ':1'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/container_user/.vscode-server/extensions/ms-python.debugpy-2025.6.0/.noConfigDebugAdapterEndpoints/endpoint-09300cba21068bbf.txt'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-d36a247bd1.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-b170eadf-5801-48f8-9b97-59e35bffbf5d.sock'), ('AMENT_PREFIX_PATH', '/ros2_ws/src/install/gz_ros2_control_tests:/ros2_ws/src/install/gz_ros2_control_demos:/ros2_ws/src/install/biped:/ros2_ws/src/install/gz_ros2_control:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('GZ_VERSION', 'garden'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/ros2_ws/src/build/gz_ros2_control'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/ros2_ws/src/install/gz_ros2_control_tests:/ros2_ws/src/install/gz_ros2_control_demos:/ros2_ws/src/install/biped:/ros2_ws/src/install/gz_ros2_control:/opt/ros/humble')]), 'shell': False}
+[0.034987] (gz_ros2_control) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.099515] (-) TimerEvent: {}
+[0.118362] (gz_ros2_control) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[0.124317] (gz_ros2_control) StdoutLine: {'line': b'-- Found ament_index_cpp: 1.4.0 (/opt/ros/humble/share/ament_index_cpp/cmake)\n'}
+[0.124936] (gz_ros2_control) StdoutLine: {'line': b'-- Found controller_manager: 2.50.0 (/opt/ros/humble/share/controller_manager/cmake)\n'}
+[0.148013] (gz_ros2_control) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.149434] (gz_ros2_control) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.152979] (gz_ros2_control) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.158511] (gz_ros2_control) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.166080] (gz_ros2_control) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.199605] (-) TimerEvent: {}
+[0.279058] (gz_ros2_control) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.279900] (gz_ros2_control) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.290985] (gz_ros2_control) StdoutLine: {'line': b'-- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND\n'}
+[0.299629] (gz_ros2_control) StdoutLine: {'line': b'-- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND\n'}
+[0.299779] (-) TimerEvent: {}
+[0.314026] (gz_ros2_control) StdoutLine: {'line': b'-- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND\n'}
+[0.318440] (gz_ros2_control) StdoutLine: {'line': b'-- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND\n'}
+[0.326081] (gz_ros2_control) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.377328] (gz_ros2_control) StdoutLine: {'line': b'-- Found yaml_cpp_vendor: 8.0.2 (/opt/ros/humble/share/yaml_cpp_vendor/cmake)\n'}
+[0.377907] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-sim7 -- found version 7.9.0\n'}
+[0.381586] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of gz-sim7\n'}
+[0.381805] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for sdformat13 -- found version 13.9.0\n'}
+[0.382034] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of sdformat13\n'}
+[0.387704] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-math7 -- found version 7.5.1\n'}
+[0.387985] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of gz-math7\n'}
+[0.388211] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-utils2 -- found version 2.2.1\n'}
+[0.388453] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of gz-utils2\n'}
+[0.389247] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-utils2 -- found version 2.2.1\n'}
+[0.389496] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of gz-utils2\n'}
+[0.389594] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for <gz-utils2> component [cli]\n'}
+[0.389763] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-utils2-cli -- found version 2.2.1\n'}
+[0.390046] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of gz-utils2-cli\n'}
+[0.390864] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-plugin2 -- found version 2.0.4\n'}
+[0.391122] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of gz-plugin2\n'}
+[0.391286] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-utils2 -- found version 2.2.1\n'}
+[0.391549] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for <gz-plugin2> component [loader]\n'}
+[0.391751] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-plugin2-loader -- found version 2.0.4\n'}
+[0.392023] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of gz-plugin2-loader\n'}
+[0.392265] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for <gz-plugin2> component [register]\n'}
+[0.392487] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-plugin2-register -- found version 2.0.4\n'}
+[0.392754] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of gz-plugin2-register\n'}
+[0.393269] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-transport12 -- found version 12.2.2\n'}
+[0.393515] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of gz-transport12\n'}
+[0.399847] (-) TimerEvent: {}
+[0.428501] (gz_ros2_control) StdoutLine: {'line': b'-- Config-file not installed for ZeroMQ -- checking for pkg-config\n'}
+[0.433596] (gz_ros2_control) StdoutLine: {'line': b"-- Checking for module 'libzmq >= 4'\n"}
+[0.449918] (gz_ros2_control) StdoutLine: {'line': b'--   Found libzmq , version 4.3.4\n'}
+[0.492251] (gz_ros2_control) StdoutLine: {'line': b"-- Checking for module 'uuid'\n"}
+[0.499907] (-) TimerEvent: {}
+[0.505424] (gz_ros2_control) StdoutLine: {'line': b'--   Found uuid, version 2.37.2\n'}
+[0.544227] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-utils2 -- found version 2.2.1\n'}
+[0.544441] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-msgs9 -- found version 9.5.1\n'}
+[0.544702] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of gz-msgs9\n'}
+[0.569002] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-math7 -- found version 7.5.1\n'}
+[0.575404] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for <gz-transport12> component [log]\n'}
+[0.575687] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-transport12-log -- found version 12.2.2\n'}
+[0.575908] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of gz-transport12-log\n'}
+[0.576206] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for <gz-transport12> component [parameters]\n'}
+[0.576415] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-transport12-parameters -- found version 12.2.2\n'}
+[0.576737] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of gz-transport12-parameters\n'}
+[0.577374] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-msgs9 -- found version 9.5.1\n'}
+[0.577606] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-common5 -- found version 5.7.1\n'}
+[0.577919] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of gz-common5\n'}
+[0.578116] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-utils2 -- found version 2.2.1\n'}
+[0.578227] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for dlfcn.h - found\n'}
+[0.578307] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for libdl - found\n'}
+[0.587341] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for <gz-common5> component [profiler]\n'}
+[0.587605] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-common5-profiler -- found version 5.7.1\n'}
+[0.587885] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of gz-common5-profiler\n'}
+[0.588172] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for <gz-common5> component [events]\n'}
+[0.588368] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-common5-events -- found version 5.7.1\n'}
+[0.588689] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of gz-common5-events\n'}
+[0.588956] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-math7 -- found version 7.5.1\n'}
+[0.589564] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for <gz-common5> component [av]\n'}
+[0.589961] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-common5-av -- found version 5.7.1\n'}
+[0.590408] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of gz-common5-av\n'}
+[0.596639] (gz_ros2_control) StdoutLine: {'line': b"-- Checking for module 'libswscale'\n"}
+[0.600046] (-) TimerEvent: {}
+[0.612587] (gz_ros2_control) StdoutLine: {'line': b'--   Found libswscale, version 5.9.100\n'}
+[0.660299] (gz_ros2_control) StdoutLine: {'line': b"-- Checking for module 'libavdevice >= 56.4.100'\n"}
+[0.676968] (gz_ros2_control) StdoutLine: {'line': b'--   Found libavdevice , version 58.13.100\n'}
+[0.700148] (-) TimerEvent: {}
+[0.717572] (gz_ros2_control) StdoutLine: {'line': b"-- Checking for module 'libavformat'\n"}
+[0.735008] (gz_ros2_control) StdoutLine: {'line': b'--   Found libavformat, version 58.76.100\n'}
+[0.776107] (gz_ros2_control) StdoutLine: {'line': b"-- Checking for module 'libavcodec'\n"}
+[0.789776] (gz_ros2_control) StdoutLine: {'line': b'--   Found libavcodec, version 58.134.100\n'}
+[0.800224] (-) TimerEvent: {}
+[0.828739] (gz_ros2_control) StdoutLine: {'line': b"-- Checking for module 'libavutil'\n"}
+[0.845327] (gz_ros2_control) StdoutLine: {'line': b'--   Found libavutil, version 56.70.100\n'}
+[0.878541] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for <gz-common5> component [io]\n'}
+[0.878807] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-common5-io -- found version 5.7.1\n'}
+[0.879204] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of gz-common5-io\n'}
+[0.879831] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-fuel_tools8 -- found version 8.2.0\n'}
+[0.880151] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of gz-fuel_tools8\n'}
+[0.900319] (-) TimerEvent: {}
+[0.915606] (gz_ros2_control) StdoutLine: {'line': b"-- Checking for module 'jsoncpp'\n"}
+[0.927435] (gz_ros2_control) StdoutLine: {'line': b'--   Found jsoncpp, version 1.9.5\n'}
+[0.973382] (gz_ros2_control) StdoutLine: {'line': b"-- Checking for module 'libzip'\n"}
+[0.985256] (gz_ros2_control) StdoutLine: {'line': b'--   Found libzip, version 1.7.3\n'}
+[1.000380] (-) TimerEvent: {}
+[1.018390] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-utils2 -- found version 2.2.1\n'}
+[1.018910] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-common5 -- found version 5.7.1\n'}
+[1.019120] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of gz-common5\n'}
+[1.019298] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-utils2 -- found version 2.2.1\n'}
+[1.019457] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for dlfcn.h - found\n'}
+[1.019517] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for libdl - found\n'}
+[1.026919] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for <gz-common5> component [testing]\n'}
+[1.027142] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-common5-testing -- found version 5.7.1\n'}
+[1.027443] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of gz-common5-testing\n'}
+[1.028542] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-math7 -- found version 7.5.1\n'}
+[1.028789] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-msgs9 -- found version 9.5.1\n'}
+[1.029409] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-gui7 -- found version 7.2.2\n'}
+[1.029668] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of gz-gui7\n'}
+[1.057741] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-utils2 -- found version 2.2.1\n'}
+[1.058013] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-math7 -- found version 7.5.1\n'}
+[1.058178] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-common5 -- found version 5.7.1\n'}
+[1.058439] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-plugin2 -- found version 2.0.4\n'}
+[1.058737] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-transport12 -- found version 12.2.2\n'}
+[1.059243] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-rendering7 -- found version 7.5.0\n'}
+[1.059529] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of gz-rendering7\n'}
+[1.059728] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-math7 -- found version 7.5.1\n'}
+[1.059988] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of gz-math7\n'}
+[1.060195] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-utils2 -- found version 2.2.1\n'}
+[1.060327] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for <gz-math7> component [eigen3]\n'}
+[1.060539] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-math7-eigen3 -- found version 7.5.1\n'}
+[1.060817] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of gz-math7-eigen3\n'}
+[1.061701] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-common5 -- found version 5.7.1\n'}
+[1.061949] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of gz-common5\n'}
+[1.062144] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-utils2 -- found version 2.2.1\n'}
+[1.062241] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for dlfcn.h - found\n'}
+[1.062310] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for libdl - found\n'}
+[1.068788] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for <gz-common5> component [graphics]\n'}
+[1.069024] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-common5-graphics -- found version 5.7.1\n'}
+[1.069314] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of gz-common5-graphics\n'}
+[1.069517] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-math7 -- found version 7.5.1\n'}
+[1.071227] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for <gz-common5> component [events]\n'}
+[1.071469] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for <gz-common5> component [geospatial]\n'}
+[1.071688] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-common5-geospatial -- found version 5.7.1\n'}
+[1.071962] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of gz-common5-geospatial\n'}
+[1.072162] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-math7 -- found version 7.5.1\n'}
+[1.072397] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-common5 -- found version 5.7.1\n'}
+[1.072941] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-plugin2 -- found version 2.0.4\n'}
+[1.073191] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of gz-plugin2\n'}
+[1.073413] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-utils2 -- found version 2.2.1\n'}
+[1.073529] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for <gz-plugin2> component [all]\n'}
+[1.073669] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for all libraries of gz-plugin2 -- found version 2.0.4\n'}
+[1.073972] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-plugin2 -- found version 2.0.4\n'}
+[1.074870] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-utils2 -- found version 2.2.1\n'}
+[1.076580] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-msgs9 -- found version 9.5.1\n'}
+[1.085389] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-physics6 -- found version 6.7.0\n'}
+[1.085641] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of gz-physics6\n'}
+[1.085857] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-common5 -- found version 5.7.1\n'}
+[1.086100] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-math7 -- found version 7.5.1\n'}
+[1.086327] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-plugin2 -- found version 2.0.4\n'}
+[1.086550] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-utils2 -- found version 2.2.1\n'}
+[1.087184] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for <gz-physics6> component [heightmap]\n'}
+[1.087413] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-physics6-heightmap -- found version 6.7.0\n'}
+[1.087698] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of gz-physics6-heightmap\n'}
+[1.087885] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-common5 -- found version 5.7.1\n'}
+[1.088114] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for <gz-physics6> component [mesh]\n'}
+[1.088327] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-physics6-mesh -- found version 6.7.0\n'}
+[1.088597] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of gz-physics6-mesh\n'}
+[1.088800] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-common5 -- found version 5.7.1\n'}
+[1.089039] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for <gz-physics6> component [sdf]\n'}
+[1.089253] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-physics6-sdf -- found version 6.7.0\n'}
+[1.089521] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of gz-physics6-sdf\n'}
+[1.089738] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for sdformat13 -- found version 13.9.0\n'}
+[1.090251] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-sensors7 -- found version 7.3.1\n'}
+[1.090504] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of gz-sensors7\n'}
+[1.100487] (-) TimerEvent: {}
+[1.110337] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-math7 -- found version 7.5.1\n'}
+[1.110777] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-common5 -- found version 5.7.1\n'}
+[1.114893] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-transport12 -- found version 12.2.2\n'}
+[1.115049] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-rendering7 -- found version 7.5.0\n'}
+[1.115178] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-msgs9 -- found version 9.5.1\n'}
+[1.115271] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for sdformat13 -- found version 13.9.0\n'}
+[1.115361] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for <gz-sensors7> component [air_pressure]\n'}
+[1.115450] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-sensors7-air_pressure -- found version 7.3.1\n'}
+[1.115542] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of gz-sensors7-air_pressure\n'}
+[1.115632] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for <gz-sensors7> component [air_speed]\n'}
+[1.115722] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-sensors7-air_speed -- found version 7.3.1\n'}
+[1.115845] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of gz-sensors7-air_speed\n'}
+[1.115980] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for <gz-sensors7> component [altimeter]\n'}
+[1.116096] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-sensors7-altimeter -- found version 7.3.1\n'}
+[1.116181] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of gz-sensors7-altimeter\n'}
+[1.116265] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for <gz-sensors7> component [imu]\n'}
+[1.116374] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-sensors7-imu -- found version 7.3.1\n'}
+[1.116459] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of gz-sensors7-imu\n'}
+[1.116560] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for <gz-sensors7> component [force_torque]\n'}
+[1.116649] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-sensors7-force_torque -- found version 7.3.1\n'}
+[1.116857] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of gz-sensors7-force_torque\n'}
+[1.117141] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for <gz-sensors7> component [logical_camera]\n'}
+[1.117453] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-sensors7-logical_camera -- found version 7.3.1\n'}
+[1.117812] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of gz-sensors7-logical_camera\n'}
+[1.118328] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for <gz-sensors7> component [magnetometer]\n'}
+[1.118612] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-sensors7-magnetometer -- found version 7.3.1\n'}
+[1.119038] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of gz-sensors7-magnetometer\n'}
+[1.119403] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for <gz-sensors7> component [navsat]\n'}
+[1.119703] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-sensors7-navsat -- found version 7.3.1\n'}
+[1.120110] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of gz-sensors7-navsat\n'}
+[1.120506] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for <gz-sensors7> component [rendering]\n'}
+[1.120820] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-sensors7-rendering -- found version 7.3.1\n'}
+[1.121198] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of gz-sensors7-rendering\n'}
+[1.121583] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for <gz-sensors7> component [lidar]\n'}
+[1.121827] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-sensors7-lidar -- found version 7.3.1\n'}
+[1.122156] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of gz-sensors7-lidar\n'}
+[1.122464] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-sensors7 -- found version 7.3.1\n'}
+[1.122820] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for <gz-sensors7> component [gpu_lidar]\n'}
+[1.123097] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-sensors7-gpu_lidar -- found version 7.3.1\n'}
+[1.123406] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of gz-sensors7-gpu_lidar\n'}
+[1.123653] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-sensors7 -- found version 7.3.1\n'}
+[1.124040] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for <gz-sensors7> component [camera]\n'}
+[1.124294] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-sensors7-camera -- found version 7.3.1\n'}
+[1.124595] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of gz-sensors7-camera\n'}
+[1.124861] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-sensors7 -- found version 7.3.1\n'}
+[1.125230] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for <gz-sensors7> component [boundingbox_camera]\n'}
+[1.125458] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-sensors7-boundingbox_camera -- found version 7.3.1\n'}
+[1.125748] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of gz-sensors7-boundingbox_camera\n'}
+[1.126037] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for <gz-sensors7> component [segmentation_camera]\n'}
+[1.126268] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-sensors7-segmentation_camera -- found version 7.3.1\n'}
+[1.126552] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of gz-sensors7-segmentation_camera\n'}
+[1.126840] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for <gz-sensors7> component [depth_camera]\n'}
+[1.127083] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-sensors7-depth_camera -- found version 7.3.1\n'}
+[1.127371] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of gz-sensors7-depth_camera\n'}
+[1.127597] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-sensors7 -- found version 7.3.1\n'}
+[1.127931] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for <gz-sensors7> component [rgbd_camera]\n'}
+[1.128175] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-sensors7-rgbd_camera -- found version 7.3.1\n'}
+[1.128488] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of gz-sensors7-rgbd_camera\n'}
+[1.128721] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-sensors7 -- found version 7.3.1\n'}
+[1.129059] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for <gz-sensors7> component [thermal_camera]\n'}
+[1.129293] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-sensors7-thermal_camera -- found version 7.3.1\n'}
+[1.129625] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of gz-sensors7-thermal_camera\n'}
+[1.129866] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-sensors7 -- found version 7.3.1\n'}
+[1.130387] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for <gz-sensors7> component [wide_angle_camera]\n'}
+[1.130902] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-sensors7-wide_angle_camera -- found version 7.3.1\n'}
+[1.131229] (gz_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of gz-sensors7-wide_angle_camera\n'}
+[1.131860] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-rendering7 -- found version 7.5.0\n'}
+[1.132132] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-math7 -- found version 7.5.1\n'}
+[1.132426] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-utils2 -- found version 2.2.1\n'}
+[1.157886] (gz_ros2_control) StdoutLine: {'line': b'-- Compiling against Gazebo Garden\n'}
+[1.158136] (gz_ros2_control) StdoutLine: {'line': b'-- Looking for gz-plugin2 -- found version 2.0.4\n'}
+[1.172122] (gz_ros2_control) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.12 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[1.200620] (-) TimerEvent: {}
+[1.224974] (gz_ros2_control) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[1.225828] (gz_ros2_control) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[1.226021] (gz_ros2_control) StdoutLine: {'line': b'-- Configured cppcheck include dirs: /ros2_ws/src/gz_ros2_control/gz_ros2_control/include\n'}
+[1.226111] (gz_ros2_control) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[1.226691] (gz_ros2_control) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[1.226830] (gz_ros2_control) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[1.227101] (gz_ros2_control) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[1.227822] (gz_ros2_control) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[1.227987] (gz_ros2_control) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[1.228123] (gz_ros2_control) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[1.229286] (gz_ros2_control) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.280787] (gz_ros2_control) StdoutLine: {'line': b'-- Generating done\n'}
+[1.286166] (gz_ros2_control) StdoutLine: {'line': b'-- Build files have been written to: /ros2_ws/src/build/gz_ros2_control\n'}
+[1.300739] (-) TimerEvent: {}
+[1.314911] (gz_ros2_control) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target gz_ros2_control-system\x1b[0m\n'}
+[1.316782] (gz_ros2_control) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target gz_hardware_plugins\x1b[0m\n'}
+[1.342740] (gz_ros2_control) StdoutLine: {'line': b'[100%] Built target gz_hardware_plugins\n'}
+[1.343189] (gz_ros2_control) StdoutLine: {'line': b'[100%] Built target gz_ros2_control-system\n'}
+[1.354251] (gz_ros2_control) CommandEnded: {'returncode': 0}
+[1.355175] (gz_ros2_control) JobProgress: {'identifier': 'gz_ros2_control', 'progress': 'install'}
+[1.361687] (gz_ros2_control) Command: {'cmd': ['/usr/bin/cmake', '--install', '/ros2_ws/src/build/gz_ros2_control'], 'cwd': '/ros2_ws/src/build/gz_ros2_control', 'env': OrderedDict([('HOSTNAME', 'Pyro'), ('GIT_ASKPASS', '/vscode/vscode-server/bin/linux-x64/17baf841131aa23349f217ca7c570c76ee87b957/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LIBGL_ALWAYS_SOFTWARE', '1'), ('LD_LIBRARY_PATH', '/ros2_ws/src/install/gz_ros2_control/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/vscode/vscode-server/bin/linux-x64/17baf841131aa23349f217ca7c570c76ee87b957/bin/helpers/browser.sh'), ('HOME', '/home/container_user'), ('TERM_PROGRAM_VERSION', '1.99.3'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-46672e09-362e-4b73-ad29-3ad405fd7764.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/vscode/vscode-server/bin/linux-x64/17baf841131aa23349f217ca7c570c76ee87b957/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/vscode/vscode-server/bin/linux-x64/17baf841131aa23349f217ca7c570c76ee87b957/node'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('BUNDLED_DEBUGPY_PATH', '/home/container_user/.vscode-server/extensions/ms-python.debugpy-2025.6.0/bundled/libs/debugpy'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('WAYLAND_DISPLAY', ''), ('COLCON_PREFIX_PATH', '/ros2_ws/src/install'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-b170eadf-5801-48f8-9b97-59e35bffbf5d.sock'), ('PULSE_SERVER', ''), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/vscode/vscode-server/bin/linux-x64/17baf841131aa23349f217ca7c570c76ee87b957/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/container_user/.vscode-server/extensions/ms-python.debugpy-2025.6.0/bundled/scripts/noConfigScripts:/home/container_user/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-b170eadf-5801-48f8-9b97-59e35bffbf5d.sock","/run/user/1000/gnupg/S.gpg-agent"]'), ('DISPLAY', ':1'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/container_user/.vscode-server/extensions/ms-python.debugpy-2025.6.0/.noConfigDebugAdapterEndpoints/endpoint-09300cba21068bbf.txt'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-d36a247bd1.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-b170eadf-5801-48f8-9b97-59e35bffbf5d.sock'), ('AMENT_PREFIX_PATH', '/ros2_ws/src/install/gz_ros2_control_tests:/ros2_ws/src/install/gz_ros2_control_demos:/ros2_ws/src/install/biped:/ros2_ws/src/install/gz_ros2_control:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('GZ_VERSION', 'garden'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/ros2_ws/src/build/gz_ros2_control'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/ros2_ws/src/install/gz_ros2_control_tests:/ros2_ws/src/install/gz_ros2_control_demos:/ros2_ws/src/install/biped:/ros2_ws/src/install/gz_ros2_control:/opt/ros/humble')]), 'shell': False}
+[1.367033] (gz_ros2_control) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[1.367349] (gz_ros2_control) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[1.367514] (gz_ros2_control) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control/lib/libgz_hardware_plugins.so\n'}
+[1.367722] (gz_ros2_control) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control/include/include/gz_ros2_control/gz_ros2_control_plugin.hpp\n'}
+[1.367799] (gz_ros2_control) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control/include/include/gz_ros2_control/gz_system.hpp\n'}
+[1.367878] (gz_ros2_control) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control/include/include/gz_ros2_control/gz_system_interface.hpp\n'}
+[1.367974] (gz_ros2_control) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control/share/gz_ros2_control/environment/library_path.sh\n'}
+[1.368055] (gz_ros2_control) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control/share/gz_ros2_control/environment/library_path.dsv\n'}
+[1.368180] (gz_ros2_control) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control/lib/libgz_ros2_control-system.so\n'}
+[1.368259] (gz_ros2_control) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control/share/gz_ros2_control//gz_hardware_plugins.xml\n'}
+[1.368352] (gz_ros2_control) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control/share/ament_index/resource_index/package_run_dependencies/gz_ros2_control\n'}
+[1.368441] (gz_ros2_control) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control/share/ament_index/resource_index/parent_prefix_path/gz_ros2_control\n'}
+[1.368537] (gz_ros2_control) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control/share/gz_ros2_control/environment/ament_prefix_path.sh\n'}
+[1.368606] (gz_ros2_control) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control/share/gz_ros2_control/environment/ament_prefix_path.dsv\n'}
+[1.368697] (gz_ros2_control) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control/share/gz_ros2_control/environment/path.sh\n'}
+[1.368772] (gz_ros2_control) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control/share/gz_ros2_control/environment/path.dsv\n'}
+[1.368847] (gz_ros2_control) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control/share/gz_ros2_control/local_setup.bash\n'}
+[1.368927] (gz_ros2_control) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control/share/gz_ros2_control/local_setup.sh\n'}
+[1.369000] (gz_ros2_control) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control/share/gz_ros2_control/local_setup.zsh\n'}
+[1.369072] (gz_ros2_control) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control/share/gz_ros2_control/local_setup.dsv\n'}
+[1.369121] (gz_ros2_control) StdoutLine: {'line': b'-- Symlinking: /ros2_ws/src/install/gz_ros2_control/share/gz_ros2_control/package.dsv\n'}
+[1.376480] (gz_ros2_control) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control/share/ament_index/resource_index/packages/gz_ros2_control\n'}
+[1.376616] (gz_ros2_control) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control/share/ament_index/resource_index/gz_ros2_control__pluginlib__plugin/gz_ros2_control\n'}
+[1.376768] (gz_ros2_control) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control/share/gz_ros2_control/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[1.376933] (gz_ros2_control) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control/share/gz_ros2_control/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[1.377057] (gz_ros2_control) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control/share/gz_ros2_control/cmake/gz_ros2_controlConfig.cmake\n'}
+[1.377139] (gz_ros2_control) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control/share/gz_ros2_control/cmake/gz_ros2_controlConfig-version.cmake\n'}
+[1.377205] (gz_ros2_control) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control/share/gz_ros2_control/package.xml\n'}
+[1.378652] (gz_ros2_control) CommandEnded: {'returncode': 0}
+[1.390461] (gz_ros2_control) JobEnded: {'identifier': 'gz_ros2_control', 'rc': 0}
+[1.390884] (biped) JobStarted: {'identifier': 'biped'}
+[1.393512] (gz_ros2_control_demos) JobStarted: {'identifier': 'gz_ros2_control_demos'}
+[1.395887] (gz_ros2_control_tests) JobStarted: {'identifier': 'gz_ros2_control_tests'}
+[1.399330] (biped) JobProgress: {'identifier': 'biped', 'progress': 'cmake'}
+[1.399974] (biped) Command: {'cmd': ['/usr/bin/cmake', '/ros2_ws/src/biped', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/ros2_ws/src/install/biped'], 'cwd': '/ros2_ws/src/build/biped', 'env': OrderedDict([('HOSTNAME', 'Pyro'), ('GIT_ASKPASS', '/vscode/vscode-server/bin/linux-x64/17baf841131aa23349f217ca7c570c76ee87b957/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LIBGL_ALWAYS_SOFTWARE', '1'), ('LD_LIBRARY_PATH', '/ros2_ws/src/install/gz_ros2_control/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/vscode/vscode-server/bin/linux-x64/17baf841131aa23349f217ca7c570c76ee87b957/bin/helpers/browser.sh'), ('HOME', '/home/container_user'), ('TERM_PROGRAM_VERSION', '1.99.3'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-46672e09-362e-4b73-ad29-3ad405fd7764.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/vscode/vscode-server/bin/linux-x64/17baf841131aa23349f217ca7c570c76ee87b957/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/vscode/vscode-server/bin/linux-x64/17baf841131aa23349f217ca7c570c76ee87b957/node'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('BUNDLED_DEBUGPY_PATH', '/home/container_user/.vscode-server/extensions/ms-python.debugpy-2025.6.0/bundled/libs/debugpy'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('WAYLAND_DISPLAY', ''), ('COLCON_PREFIX_PATH', '/ros2_ws/src/install'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-b170eadf-5801-48f8-9b97-59e35bffbf5d.sock'), ('PULSE_SERVER', ''), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/vscode/vscode-server/bin/linux-x64/17baf841131aa23349f217ca7c570c76ee87b957/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/container_user/.vscode-server/extensions/ms-python.debugpy-2025.6.0/bundled/scripts/noConfigScripts:/home/container_user/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-b170eadf-5801-48f8-9b97-59e35bffbf5d.sock","/run/user/1000/gnupg/S.gpg-agent"]'), ('DISPLAY', ':1'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/container_user/.vscode-server/extensions/ms-python.debugpy-2025.6.0/.noConfigDebugAdapterEndpoints/endpoint-09300cba21068bbf.txt'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-d36a247bd1.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-b170eadf-5801-48f8-9b97-59e35bffbf5d.sock'), ('AMENT_PREFIX_PATH', '/ros2_ws/src/install/gz_ros2_control_tests:/ros2_ws/src/install/gz_ros2_control_demos:/ros2_ws/src/install/biped:/ros2_ws/src/install/gz_ros2_control:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('GZ_VERSION', 'garden'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/ros2_ws/src/build/biped'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/ros2_ws/src/install/gz_ros2_control:/ros2_ws/src/install/gz_ros2_control_tests:/ros2_ws/src/install/gz_ros2_control_demos:/ros2_ws/src/install/biped:/opt/ros/humble')]), 'shell': False}
+[1.401341] (-) TimerEvent: {}
+[1.401469] (gz_ros2_control_demos) JobProgress: {'identifier': 'gz_ros2_control_demos', 'progress': 'cmake'}
+[1.401798] (gz_ros2_control_demos) JobProgress: {'identifier': 'gz_ros2_control_demos', 'progress': 'build'}
+[1.402070] (gz_ros2_control_demos) Command: {'cmd': ['/usr/bin/cmake', '--build', '/ros2_ws/src/build/gz_ros2_control_demos', '--', '-j16', '-l16'], 'cwd': '/ros2_ws/src/build/gz_ros2_control_demos', 'env': OrderedDict([('HOSTNAME', 'Pyro'), ('GIT_ASKPASS', '/vscode/vscode-server/bin/linux-x64/17baf841131aa23349f217ca7c570c76ee87b957/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LIBGL_ALWAYS_SOFTWARE', '1'), ('LD_LIBRARY_PATH', '/ros2_ws/src/install/gz_ros2_control/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/vscode/vscode-server/bin/linux-x64/17baf841131aa23349f217ca7c570c76ee87b957/bin/helpers/browser.sh'), ('HOME', '/home/container_user'), ('TERM_PROGRAM_VERSION', '1.99.3'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-46672e09-362e-4b73-ad29-3ad405fd7764.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/vscode/vscode-server/bin/linux-x64/17baf841131aa23349f217ca7c570c76ee87b957/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/vscode/vscode-server/bin/linux-x64/17baf841131aa23349f217ca7c570c76ee87b957/node'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('BUNDLED_DEBUGPY_PATH', '/home/container_user/.vscode-server/extensions/ms-python.debugpy-2025.6.0/bundled/libs/debugpy'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('WAYLAND_DISPLAY', ''), ('COLCON_PREFIX_PATH', '/ros2_ws/src/install'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-b170eadf-5801-48f8-9b97-59e35bffbf5d.sock'), ('PULSE_SERVER', ''), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/vscode/vscode-server/bin/linux-x64/17baf841131aa23349f217ca7c570c76ee87b957/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/container_user/.vscode-server/extensions/ms-python.debugpy-2025.6.0/bundled/scripts/noConfigScripts:/home/container_user/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-b170eadf-5801-48f8-9b97-59e35bffbf5d.sock","/run/user/1000/gnupg/S.gpg-agent"]'), ('DISPLAY', ':1'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/container_user/.vscode-server/extensions/ms-python.debugpy-2025.6.0/.noConfigDebugAdapterEndpoints/endpoint-09300cba21068bbf.txt'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-d36a247bd1.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-b170eadf-5801-48f8-9b97-59e35bffbf5d.sock'), ('AMENT_PREFIX_PATH', '/ros2_ws/src/install/gz_ros2_control_tests:/ros2_ws/src/install/gz_ros2_control_demos:/ros2_ws/src/install/biped:/ros2_ws/src/install/gz_ros2_control:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('GZ_VERSION', 'garden'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/ros2_ws/src/build/gz_ros2_control_demos'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/ros2_ws/src/install/gz_ros2_control:/ros2_ws/src/install/gz_ros2_control_tests:/ros2_ws/src/install/gz_ros2_control_demos:/ros2_ws/src/install/biped:/opt/ros/humble')]), 'shell': False}
+[1.407569] (gz_ros2_control_tests) JobProgress: {'identifier': 'gz_ros2_control_tests', 'progress': 'cmake'}
+[1.407599] (gz_ros2_control_tests) JobProgress: {'identifier': 'gz_ros2_control_tests', 'progress': 'build'}
+[1.407614] (gz_ros2_control_tests) Command: {'cmd': ['/usr/bin/cmake', '--build', '/ros2_ws/src/build/gz_ros2_control_tests', '--', '-j16', '-l16'], 'cwd': '/ros2_ws/src/build/gz_ros2_control_tests', 'env': OrderedDict([('HOSTNAME', 'Pyro'), ('GIT_ASKPASS', '/vscode/vscode-server/bin/linux-x64/17baf841131aa23349f217ca7c570c76ee87b957/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LIBGL_ALWAYS_SOFTWARE', '1'), ('LD_LIBRARY_PATH', '/ros2_ws/src/install/gz_ros2_control/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/vscode/vscode-server/bin/linux-x64/17baf841131aa23349f217ca7c570c76ee87b957/bin/helpers/browser.sh'), ('HOME', '/home/container_user'), ('TERM_PROGRAM_VERSION', '1.99.3'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-46672e09-362e-4b73-ad29-3ad405fd7764.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/vscode/vscode-server/bin/linux-x64/17baf841131aa23349f217ca7c570c76ee87b957/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/vscode/vscode-server/bin/linux-x64/17baf841131aa23349f217ca7c570c76ee87b957/node'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('BUNDLED_DEBUGPY_PATH', '/home/container_user/.vscode-server/extensions/ms-python.debugpy-2025.6.0/bundled/libs/debugpy'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('WAYLAND_DISPLAY', ''), ('COLCON_PREFIX_PATH', '/ros2_ws/src/install'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-b170eadf-5801-48f8-9b97-59e35bffbf5d.sock'), ('PULSE_SERVER', ''), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/vscode/vscode-server/bin/linux-x64/17baf841131aa23349f217ca7c570c76ee87b957/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/container_user/.vscode-server/extensions/ms-python.debugpy-2025.6.0/bundled/scripts/noConfigScripts:/home/container_user/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-b170eadf-5801-48f8-9b97-59e35bffbf5d.sock","/run/user/1000/gnupg/S.gpg-agent"]'), ('DISPLAY', ':1'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/container_user/.vscode-server/extensions/ms-python.debugpy-2025.6.0/.noConfigDebugAdapterEndpoints/endpoint-09300cba21068bbf.txt'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-d36a247bd1.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-b170eadf-5801-48f8-9b97-59e35bffbf5d.sock'), ('AMENT_PREFIX_PATH', '/ros2_ws/src/install/gz_ros2_control_tests:/ros2_ws/src/install/gz_ros2_control_demos:/ros2_ws/src/install/biped:/ros2_ws/src/install/gz_ros2_control:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('GZ_VERSION', 'garden'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/ros2_ws/src/build/gz_ros2_control_tests'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/ros2_ws/src/install/gz_ros2_control:/ros2_ws/src/install/gz_ros2_control_tests:/ros2_ws/src/install/gz_ros2_control_demos:/ros2_ws/src/install/biped:/opt/ros/humble')]), 'shell': False}
+[1.411983] (biped) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[1.427460] (gz_ros2_control_demos) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[1.428746] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[1.501452] (-) TimerEvent: {}
+[1.515487] (biped) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[1.519546] (biped) StdoutLine: {'line': b'-- Found rclcpp: 16.0.12 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[1.530134] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[1.536544] (gz_ros2_control_demos) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[1.537089] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.12 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[1.541363] (gz_ros2_control_demos) StdoutLine: {'line': b'-- Found control_msgs: 4.8.0 (/opt/ros/humble/share/control_msgs/cmake)\n'}
+[1.543367] (biped) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[1.546696] (biped) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[1.550991] (biped) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[1.557303] (biped) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.560792] (gz_ros2_control_demos) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[1.562355] (gz_ros2_control_demos) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[1.564851] (biped) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.565999] (gz_ros2_control_demos) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[1.571752] (gz_ros2_control_demos) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.579356] (gz_ros2_control_demos) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.585384] (biped) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[1.586607] (biped) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[1.587107] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Found control_msgs: 4.8.0 (/opt/ros/humble/share/control_msgs/cmake)\n'}
+[1.601556] (-) TimerEvent: {}
+[1.609378] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[1.611571] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[1.617326] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[1.624919] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.636630] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.656464] (gz_ros2_control_demos) StdoutLine: {'line': b'-- Found rclcpp: 16.0.12 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[1.671795] (gz_ros2_control_demos) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[1.672648] (gz_ros2_control_demos) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[1.698515] (biped) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[1.701669] (-) TimerEvent: {}
+[1.708529] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Found rclcpp: 16.0.12 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[1.726907] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[1.727789] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[1.732128] (biped) StdoutLine: {'line': b'-- Found ros2_control: 2.50.0 (/opt/ros/humble/share/ros2_control/cmake)\n'}
+[1.732307] (biped) StdoutLine: {'line': b'-- Found ros2_controllers: 2.44.0 (/opt/ros/humble/share/ros2_controllers/cmake)\n'}
+[1.732413] (biped) StdoutLine: {'line': b'-- Found gz_ros2_control: 1.1.8 (/ros2_ws/src/install/gz_ros2_control/share/gz_ros2_control/cmake)\n'}
+[1.769085] (gz_ros2_control_demos) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[1.777958] (biped) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.782199] (biped) StdoutLine: {'line': b'-- Generating done\n'}
+[1.784154] (biped) StdoutLine: {'line': b'-- Build files have been written to: /ros2_ws/src/build/biped\n'}
+[1.789824] (biped) CommandEnded: {'returncode': 0}
+[1.790507] (biped) JobProgress: {'identifier': 'biped', 'progress': 'build'}
+[1.790803] (biped) Command: {'cmd': ['/usr/bin/cmake', '--build', '/ros2_ws/src/build/biped', '--', '-j16', '-l16'], 'cwd': '/ros2_ws/src/build/biped', 'env': OrderedDict([('HOSTNAME', 'Pyro'), ('GIT_ASKPASS', '/vscode/vscode-server/bin/linux-x64/17baf841131aa23349f217ca7c570c76ee87b957/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LIBGL_ALWAYS_SOFTWARE', '1'), ('LD_LIBRARY_PATH', '/ros2_ws/src/install/gz_ros2_control/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/vscode/vscode-server/bin/linux-x64/17baf841131aa23349f217ca7c570c76ee87b957/bin/helpers/browser.sh'), ('HOME', '/home/container_user'), ('TERM_PROGRAM_VERSION', '1.99.3'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-46672e09-362e-4b73-ad29-3ad405fd7764.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/vscode/vscode-server/bin/linux-x64/17baf841131aa23349f217ca7c570c76ee87b957/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/vscode/vscode-server/bin/linux-x64/17baf841131aa23349f217ca7c570c76ee87b957/node'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('BUNDLED_DEBUGPY_PATH', '/home/container_user/.vscode-server/extensions/ms-python.debugpy-2025.6.0/bundled/libs/debugpy'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('WAYLAND_DISPLAY', ''), ('COLCON_PREFIX_PATH', '/ros2_ws/src/install'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-b170eadf-5801-48f8-9b97-59e35bffbf5d.sock'), ('PULSE_SERVER', ''), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/vscode/vscode-server/bin/linux-x64/17baf841131aa23349f217ca7c570c76ee87b957/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/container_user/.vscode-server/extensions/ms-python.debugpy-2025.6.0/bundled/scripts/noConfigScripts:/home/container_user/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-b170eadf-5801-48f8-9b97-59e35bffbf5d.sock","/run/user/1000/gnupg/S.gpg-agent"]'), ('DISPLAY', ':1'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/container_user/.vscode-server/extensions/ms-python.debugpy-2025.6.0/.noConfigDebugAdapterEndpoints/endpoint-09300cba21068bbf.txt'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-d36a247bd1.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-b170eadf-5801-48f8-9b97-59e35bffbf5d.sock'), ('AMENT_PREFIX_PATH', '/ros2_ws/src/install/gz_ros2_control_tests:/ros2_ws/src/install/gz_ros2_control_demos:/ros2_ws/src/install/biped:/ros2_ws/src/install/gz_ros2_control:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('GZ_VERSION', 'garden'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/ros2_ws/src/build/biped'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/ros2_ws/src/install/gz_ros2_control:/ros2_ws/src/install/gz_ros2_control_tests:/ros2_ws/src/install/gz_ros2_control_demos:/ros2_ws/src/install/biped:/opt/ros/humble')]), 'shell': False}
+[1.792636] (gz_ros2_control_demos) StdoutLine: {'line': b'-- Found rclcpp_action: 16.0.12 (/opt/ros/humble/share/rclcpp_action/cmake)\n'}
+[1.800883] (gz_ros2_control_demos) StdoutLine: {'line': b'-- Found ament_cmake_gtest: 1.3.11 (/opt/ros/humble/share/ament_cmake_gtest/cmake)\n'}
+[1.801257] (gz_ros2_control_demos) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.12 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[1.801723] (-) TimerEvent: {}
+[1.829313] (biped) CommandEnded: {'returncode': 0}
+[1.829959] (biped) JobProgress: {'identifier': 'biped', 'progress': 'install'}
+[1.830102] (biped) Command: {'cmd': ['/usr/bin/cmake', '--install', '/ros2_ws/src/build/biped'], 'cwd': '/ros2_ws/src/build/biped', 'env': OrderedDict([('HOSTNAME', 'Pyro'), ('GIT_ASKPASS', '/vscode/vscode-server/bin/linux-x64/17baf841131aa23349f217ca7c570c76ee87b957/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LIBGL_ALWAYS_SOFTWARE', '1'), ('LD_LIBRARY_PATH', '/ros2_ws/src/install/gz_ros2_control/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/vscode/vscode-server/bin/linux-x64/17baf841131aa23349f217ca7c570c76ee87b957/bin/helpers/browser.sh'), ('HOME', '/home/container_user'), ('TERM_PROGRAM_VERSION', '1.99.3'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-46672e09-362e-4b73-ad29-3ad405fd7764.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/vscode/vscode-server/bin/linux-x64/17baf841131aa23349f217ca7c570c76ee87b957/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/vscode/vscode-server/bin/linux-x64/17baf841131aa23349f217ca7c570c76ee87b957/node'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('BUNDLED_DEBUGPY_PATH', '/home/container_user/.vscode-server/extensions/ms-python.debugpy-2025.6.0/bundled/libs/debugpy'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('WAYLAND_DISPLAY', ''), ('COLCON_PREFIX_PATH', '/ros2_ws/src/install'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-b170eadf-5801-48f8-9b97-59e35bffbf5d.sock'), ('PULSE_SERVER', ''), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/vscode/vscode-server/bin/linux-x64/17baf841131aa23349f217ca7c570c76ee87b957/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/container_user/.vscode-server/extensions/ms-python.debugpy-2025.6.0/bundled/scripts/noConfigScripts:/home/container_user/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-b170eadf-5801-48f8-9b97-59e35bffbf5d.sock","/run/user/1000/gnupg/S.gpg-agent"]'), ('DISPLAY', ':1'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/container_user/.vscode-server/extensions/ms-python.debugpy-2025.6.0/.noConfigDebugAdapterEndpoints/endpoint-09300cba21068bbf.txt'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-d36a247bd1.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-b170eadf-5801-48f8-9b97-59e35bffbf5d.sock'), ('AMENT_PREFIX_PATH', '/ros2_ws/src/install/gz_ros2_control_tests:/ros2_ws/src/install/gz_ros2_control_demos:/ros2_ws/src/install/biped:/ros2_ws/src/install/gz_ros2_control:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('GZ_VERSION', 'garden'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/ros2_ws/src/build/biped'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/ros2_ws/src/install/gz_ros2_control:/ros2_ws/src/install/gz_ros2_control_tests:/ros2_ws/src/install/gz_ros2_control_demos:/ros2_ws/src/install/biped:/opt/ros/humble')]), 'shell': False}
+[1.832568] (gz_ros2_control_tests) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[1.836896] (biped) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[1.837197] (biped) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[1.837443] (biped) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/biped/share/biped/launch/launch.py\n'}
+[1.837633] (biped) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/biped/share/biped/urdf/biped.urdf\n'}
+[1.837798] (biped) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/biped/share/biped/urdf/biped.urdf.xacro\n'}
+[1.837898] (biped) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/biped/share/biped/urdf/common.xacro\n'}
+[1.838025] (biped) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/biped/share/biped/config/asmc.yaml\n'}
+[1.838120] (biped) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/biped/share/biped/config/biped.yaml\n'}
+[1.838212] (biped) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/biped/share/biped/config/biped_config.rviz\n'}
+[1.838401] (biped) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/biped/share/biped/config/biped_controller.yaml\n'}
+[1.838556] (biped) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/biped/share/biped/meshes/base_link.stl\n'}
+[1.838761] (biped) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/biped/share/biped/meshes/left_femur.stl\n'}
+[1.838952] (biped) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/biped/share/biped/meshes/left_hip.stl\n'}
+[1.839007] (biped) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/biped/share/biped/meshes/left_hip1.stl\n'}
+[1.839036] (biped) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/biped/share/biped/meshes/left_tibia.stl\n'}
+[1.839075] (biped) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/biped/share/biped/meshes/right_femur.stl\n'}
+[1.839106] (biped) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/biped/share/biped/meshes/right_hip.stl\n'}
+[1.839135] (biped) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/biped/share/biped/meshes/right_hip1.stl\n'}
+[1.839164] (biped) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/biped/share/biped/meshes/right_tibia.stl\n'}
+[1.839278] (biped) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/biped/share/biped/src/controller_switcher.py\n'}
+[1.839746] (biped) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/biped/share/biped/src/effort_asmc.py\n'}
+[1.840494] (biped) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/biped/share/biped/src/leg_slider_gui.py\n'}
+[1.841195] (biped) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/biped/share/ament_index/resource_index/package_run_dependencies/biped\n'}
+[1.841282] (biped) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/biped/share/ament_index/resource_index/parent_prefix_path/biped\n'}
+[1.841371] (biped) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/biped/share/biped/environment/ament_prefix_path.sh\n'}
+[1.841476] (biped) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/biped/share/biped/environment/ament_prefix_path.dsv\n'}
+[1.841586] (biped) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/biped/share/biped/environment/path.sh\n'}
+[1.841673] (biped) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/biped/share/biped/environment/path.dsv\n'}
+[1.841756] (biped) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/biped/share/biped/local_setup.bash\n'}
+[1.841834] (biped) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/biped/share/biped/local_setup.sh\n'}
+[1.841948] (biped) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/biped/share/biped/local_setup.zsh\n'}
+[1.842027] (biped) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/biped/share/biped/local_setup.dsv\n'}
+[1.842091] (biped) StdoutLine: {'line': b'-- Symlinking: /ros2_ws/src/install/biped/share/biped/package.dsv\n'}
+[1.852956] (biped) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/biped/share/ament_index/resource_index/packages/biped\n'}
+[1.853146] (biped) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/biped/share/biped/cmake/bipedConfig.cmake\n'}
+[1.853214] (biped) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/biped/share/biped/cmake/bipedConfig-version.cmake\n'}
+[1.853327] (biped) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/biped/share/biped/package.xml\n'}
+[1.855235] (biped) CommandEnded: {'returncode': 0}
+[1.859771] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Found rclcpp_action: 16.0.12 (/opt/ros/humble/share/rclcpp_action/cmake)\n'}
+[1.864694] (biped) JobEnded: {'identifier': 'biped', 'rc': 0}
+[1.865256] (gz_ros2_control_demos) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[1.866174] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Found launch_testing_ament_cmake: 1.0.8 (/opt/ros/humble/share/launch_testing_ament_cmake/cmake)\n'}
+[1.866488] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[1.866720] (gz_ros2_control_demos) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[1.866852] (gz_ros2_control_demos) StdoutLine: {'line': b'-- Configured cppcheck include dirs: \n'}
+[1.866895] (gz_ros2_control_demos) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[1.868212] (gz_ros2_control_demos) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[1.868345] (gz_ros2_control_demos) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[1.868548] (gz_ros2_control_demos) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[1.869002] (gz_ros2_control_demos) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[1.869324] (gz_ros2_control_demos) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257\n"}
+[1.870654] (gz_ros2_control_demos) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[1.870703] (gz_ros2_control_demos) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[1.870985] (gz_ros2_control_demos) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[1.871675] (gz_ros2_control_demos) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.884093] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[1.884265] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[1.884317] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so\n'}
+[1.888394] (gz_ros2_control_tests) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[1.889461] (gz_ros2_control_tests) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[1.889531] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Configured cppcheck include dirs: \n'}
+[1.889569] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[1.890326] (gz_ros2_control_tests) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[1.890369] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[1.890613] (gz_ros2_control_tests) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[1.890926] (gz_ros2_control_tests) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[1.891168] (gz_ros2_control_tests) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257\n"}
+[1.891851] (gz_ros2_control_tests) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[1.891896] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[1.892165] (gz_ros2_control_tests) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[1.892846] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.895478] (gz_ros2_control_demos) StdoutLine: {'line': b'-- Generating done\n'}
+[1.901985] (-) TimerEvent: {}
+[1.904985] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Generating done\n'}
+[1.905448] (gz_ros2_control_demos) StdoutLine: {'line': b'-- Build files have been written to: /ros2_ws/src/build/gz_ros2_control_demos\n'}
+[1.908984] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Build files have been written to: /ros2_ws/src/build/gz_ros2_control_tests\n'}
+[1.940457] (gz_ros2_control_demos) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target example_tricycle_drive\x1b[0m\n'}
+[1.940935] (gz_ros2_control_demos) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target example_diff_drive\x1b[0m\n'}
+[1.940994] (gz_ros2_control_demos) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target example_ackermann_drive\x1b[0m\n'}
+[1.941038] (gz_ros2_control_demos) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target example_gripper\x1b[0m\n'}
+[1.941469] (gz_ros2_control_demos) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target example_velocity\x1b[0m\n'}
+[1.941521] (gz_ros2_control_demos) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target example_position\x1b[0m\n'}
+[1.941566] (gz_ros2_control_demos) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target example_effort\x1b[0m\n'}
+[1.944715] (gz_ros2_control_tests) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target test_position\x1b[0m\n'}
+[1.959851] (gz_ros2_control_demos) StdoutLine: {'line': b'[ 57%] Built target example_diff_drive\n'}
+[1.960096] (gz_ros2_control_demos) StdoutLine: {'line': b'[ 57%] \x1b[32mBuilding CXX object CMakeFiles/example_gripper.dir/examples/example_gripper.cpp.o\x1b[0m\n'}
+[1.960150] (gz_ros2_control_demos) StdoutLine: {'line': b'[ 71%] Built target example_ackermann_drive\n'}
+[1.960193] (gz_ros2_control_demos) StdoutLine: {'line': b'[ 57%] \x1b[32mBuilding CXX object CMakeFiles/example_tricycle_drive.dir/examples/example_tricycle_drive.cpp.o\x1b[0m\n'}
+[1.960235] (gz_ros2_control_demos) StdoutLine: {'line': b'[ 57%] Built target example_velocity\n'}
+[1.960274] (gz_ros2_control_demos) StdoutLine: {'line': b'[ 71%] Built target example_effort\n'}
+[1.965049] (gz_ros2_control_tests) StdoutLine: {'line': b'[100%] Built target test_position\n'}
+[1.965265] (gz_ros2_control_demos) StdoutLine: {'line': b'[ 85%] Built target example_position\n'}
+[1.982159] (gz_ros2_control_tests) CommandEnded: {'returncode': 0}
+[1.982667] (gz_ros2_control_tests) JobProgress: {'identifier': 'gz_ros2_control_tests', 'progress': 'install'}
+[1.983002] (gz_ros2_control_tests) Command: {'cmd': ['/usr/bin/cmake', '--install', '/ros2_ws/src/build/gz_ros2_control_tests'], 'cwd': '/ros2_ws/src/build/gz_ros2_control_tests', 'env': OrderedDict([('HOSTNAME', 'Pyro'), ('GIT_ASKPASS', '/vscode/vscode-server/bin/linux-x64/17baf841131aa23349f217ca7c570c76ee87b957/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LIBGL_ALWAYS_SOFTWARE', '1'), ('LD_LIBRARY_PATH', '/ros2_ws/src/install/gz_ros2_control/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/vscode/vscode-server/bin/linux-x64/17baf841131aa23349f217ca7c570c76ee87b957/bin/helpers/browser.sh'), ('HOME', '/home/container_user'), ('TERM_PROGRAM_VERSION', '1.99.3'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-46672e09-362e-4b73-ad29-3ad405fd7764.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/vscode/vscode-server/bin/linux-x64/17baf841131aa23349f217ca7c570c76ee87b957/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/vscode/vscode-server/bin/linux-x64/17baf841131aa23349f217ca7c570c76ee87b957/node'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('BUNDLED_DEBUGPY_PATH', '/home/container_user/.vscode-server/extensions/ms-python.debugpy-2025.6.0/bundled/libs/debugpy'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('WAYLAND_DISPLAY', ''), ('COLCON_PREFIX_PATH', '/ros2_ws/src/install'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-b170eadf-5801-48f8-9b97-59e35bffbf5d.sock'), ('PULSE_SERVER', ''), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/vscode/vscode-server/bin/linux-x64/17baf841131aa23349f217ca7c570c76ee87b957/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/container_user/.vscode-server/extensions/ms-python.debugpy-2025.6.0/bundled/scripts/noConfigScripts:/home/container_user/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-b170eadf-5801-48f8-9b97-59e35bffbf5d.sock","/run/user/1000/gnupg/S.gpg-agent"]'), ('DISPLAY', ':1'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/container_user/.vscode-server/extensions/ms-python.debugpy-2025.6.0/.noConfigDebugAdapterEndpoints/endpoint-09300cba21068bbf.txt'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-d36a247bd1.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-b170eadf-5801-48f8-9b97-59e35bffbf5d.sock'), ('AMENT_PREFIX_PATH', '/ros2_ws/src/install/gz_ros2_control_tests:/ros2_ws/src/install/gz_ros2_control_demos:/ros2_ws/src/install/biped:/ros2_ws/src/install/gz_ros2_control:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('GZ_VERSION', 'garden'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/ros2_ws/src/build/gz_ros2_control_tests'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/ros2_ws/src/install/gz_ros2_control:/ros2_ws/src/install/gz_ros2_control_tests:/ros2_ws/src/install/gz_ros2_control_demos:/ros2_ws/src/install/biped:/opt/ros/humble')]), 'shell': False}
+[1.992319] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[1.992620] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[1.992832] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_tests/lib/gz_ros2_control_tests/test_position\n'}
+[1.993112] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_tests/share/gz_ros2_control_tests//urdf/test_cart_position.xacro.urdf\n'}
+[1.993298] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_tests/share/gz_ros2_control_tests//config/cart_controller_position.yaml\n'}
+[1.993432] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_tests/share/ament_index/resource_index/package_run_dependencies/gz_ros2_control_tests\n'}
+[1.993560] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_tests/share/ament_index/resource_index/parent_prefix_path/gz_ros2_control_tests\n'}
+[1.993674] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_tests/share/gz_ros2_control_tests/environment/ament_prefix_path.sh\n'}
+[1.993767] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_tests/share/gz_ros2_control_tests/environment/ament_prefix_path.dsv\n'}
+[1.993908] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_tests/share/gz_ros2_control_tests/environment/path.sh\n'}
+[1.994041] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_tests/share/gz_ros2_control_tests/environment/path.dsv\n'}
+[1.994161] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_tests/share/gz_ros2_control_tests/local_setup.bash\n'}
+[1.994274] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_tests/share/gz_ros2_control_tests/local_setup.sh\n'}
+[1.994377] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_tests/share/gz_ros2_control_tests/local_setup.zsh\n'}
+[1.994464] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_tests/share/gz_ros2_control_tests/local_setup.dsv\n'}
+[1.994561] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Symlinking: /ros2_ws/src/install/gz_ros2_control_tests/share/gz_ros2_control_tests/package.dsv\n'}
+[2.002080] (-) TimerEvent: {}
+[2.003442] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_tests/share/ament_index/resource_index/packages/gz_ros2_control_tests\n'}
+[2.003639] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_tests/share/gz_ros2_control_tests/cmake/gz_ros2_control_testsConfig.cmake\n'}
+[2.003696] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_tests/share/gz_ros2_control_tests/cmake/gz_ros2_control_testsConfig-version.cmake\n'}
+[2.003743] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_tests/share/gz_ros2_control_tests/package.xml\n'}
+[2.005563] (gz_ros2_control_tests) CommandEnded: {'returncode': 0}
+[2.017189] (gz_ros2_control_tests) JobEnded: {'identifier': 'gz_ros2_control_tests', 'rc': 0}
+[2.102230] (-) TimerEvent: {}
+[2.202666] (-) TimerEvent: {}
+[2.303119] (-) TimerEvent: {}
+[2.403460] (-) TimerEvent: {}
+[2.503804] (-) TimerEvent: {}
+[2.604208] (-) TimerEvent: {}
+[2.704538] (-) TimerEvent: {}
+[2.804894] (-) TimerEvent: {}
+[2.905251] (-) TimerEvent: {}
+[3.005594] (-) TimerEvent: {}
+[3.105902] (-) TimerEvent: {}
+[3.206228] (-) TimerEvent: {}
+[3.306590] (-) TimerEvent: {}
+[3.406947] (-) TimerEvent: {}
+[3.507342] (-) TimerEvent: {}
+[3.607680] (-) TimerEvent: {}
+[3.708029] (-) TimerEvent: {}
+[3.808392] (-) TimerEvent: {}
+[3.908733] (-) TimerEvent: {}
+[4.009113] (-) TimerEvent: {}
+[4.109441] (-) TimerEvent: {}
+[4.209760] (-) TimerEvent: {}
+[4.310151] (-) TimerEvent: {}
+[4.410501] (-) TimerEvent: {}
+[4.510836] (-) TimerEvent: {}
+[4.611158] (-) TimerEvent: {}
+[4.711419] (-) TimerEvent: {}
+[4.811707] (-) TimerEvent: {}
+[4.912065] (-) TimerEvent: {}
+[5.012449] (-) TimerEvent: {}
+[5.112765] (-) TimerEvent: {}
+[5.128597] (gz_ros2_control_demos) StdoutLine: {'line': b'[ 92%] \x1b[32m\x1b[1mLinking CXX executable example_tricycle_drive\x1b[0m\n'}
+[5.130099] (gz_ros2_control_demos) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable example_gripper\x1b[0m\n'}
+[5.212914] (-) TimerEvent: {}
+[5.282572] (gz_ros2_control_demos) StdoutLine: {'line': b'[100%] Built target example_tricycle_drive\n'}
+[5.282763] (gz_ros2_control_demos) StdoutLine: {'line': b'[100%] Built target example_gripper\n'}
+[5.291292] (gz_ros2_control_demos) CommandEnded: {'returncode': 0}
+[5.291770] (gz_ros2_control_demos) JobProgress: {'identifier': 'gz_ros2_control_demos', 'progress': 'install'}
+[5.292081] (gz_ros2_control_demos) Command: {'cmd': ['/usr/bin/cmake', '--install', '/ros2_ws/src/build/gz_ros2_control_demos'], 'cwd': '/ros2_ws/src/build/gz_ros2_control_demos', 'env': OrderedDict([('HOSTNAME', 'Pyro'), ('GIT_ASKPASS', '/vscode/vscode-server/bin/linux-x64/17baf841131aa23349f217ca7c570c76ee87b957/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LIBGL_ALWAYS_SOFTWARE', '1'), ('LD_LIBRARY_PATH', '/ros2_ws/src/install/gz_ros2_control/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/vscode/vscode-server/bin/linux-x64/17baf841131aa23349f217ca7c570c76ee87b957/bin/helpers/browser.sh'), ('HOME', '/home/container_user'), ('TERM_PROGRAM_VERSION', '1.99.3'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-46672e09-362e-4b73-ad29-3ad405fd7764.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/vscode/vscode-server/bin/linux-x64/17baf841131aa23349f217ca7c570c76ee87b957/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/vscode/vscode-server/bin/linux-x64/17baf841131aa23349f217ca7c570c76ee87b957/node'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('BUNDLED_DEBUGPY_PATH', '/home/container_user/.vscode-server/extensions/ms-python.debugpy-2025.6.0/bundled/libs/debugpy'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('WAYLAND_DISPLAY', ''), ('COLCON_PREFIX_PATH', '/ros2_ws/src/install'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-b170eadf-5801-48f8-9b97-59e35bffbf5d.sock'), ('PULSE_SERVER', ''), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/vscode/vscode-server/bin/linux-x64/17baf841131aa23349f217ca7c570c76ee87b957/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/container_user/.vscode-server/extensions/ms-python.debugpy-2025.6.0/bundled/scripts/noConfigScripts:/home/container_user/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-b170eadf-5801-48f8-9b97-59e35bffbf5d.sock","/run/user/1000/gnupg/S.gpg-agent"]'), ('DISPLAY', ':1'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/container_user/.vscode-server/extensions/ms-python.debugpy-2025.6.0/.noConfigDebugAdapterEndpoints/endpoint-09300cba21068bbf.txt'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-d36a247bd1.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-b170eadf-5801-48f8-9b97-59e35bffbf5d.sock'), ('AMENT_PREFIX_PATH', '/ros2_ws/src/install/gz_ros2_control_tests:/ros2_ws/src/install/gz_ros2_control_demos:/ros2_ws/src/install/biped:/ros2_ws/src/install/gz_ros2_control:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('GZ_VERSION', 'garden'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/ros2_ws/src/build/gz_ros2_control_demos'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/ros2_ws/src/install/gz_ros2_control:/ros2_ws/src/install/gz_ros2_control_tests:/ros2_ws/src/install/gz_ros2_control_demos:/ros2_ws/src/install/biped:/opt/ros/humble')]), 'shell': False}
+[5.298435] (gz_ros2_control_demos) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[5.298728] (gz_ros2_control_demos) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[5.298990] (gz_ros2_control_demos) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos//launch/ackermann_drive_example.launch.py\n'}
+[5.299085] (gz_ros2_control_demos) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos//launch/cart_example_effort.launch.py\n'}
+[5.299176] (gz_ros2_control_demos) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos//launch/cart_example_position.launch.py\n'}
+[5.299232] (gz_ros2_control_demos) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos//launch/cart_example_velocity.launch.py\n'}
+[5.299308] (gz_ros2_control_demos) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos//launch/diff_drive_example.launch.py\n'}
+[5.299370] (gz_ros2_control_demos) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos//launch/gripper_mimic_joint_example.launch.py\n'}
+[5.299453] (gz_ros2_control_demos) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos//launch/pendulum_example_effort.launch.py\n'}
+[5.299509] (gz_ros2_control_demos) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos//launch/pendulum_example_position.launch.py\n'}
+[5.299585] (gz_ros2_control_demos) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos//launch/tricycle_drive_example.launch.py\n'}
+[5.299667] (gz_ros2_control_demos) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos//config/ackermann_drive_controller.yaml\n'}
+[5.299719] (gz_ros2_control_demos) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos//config/cart_controller_effort.yaml\n'}
+[5.299801] (gz_ros2_control_demos) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos//config/cart_controller_position.yaml\n'}
+[5.299866] (gz_ros2_control_demos) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos//config/cart_controller_velocity.yaml\n'}
+[5.299919] (gz_ros2_control_demos) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos//config/diff_drive_controller_velocity.yaml\n'}
+[5.299944] (gz_ros2_control_demos) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos//config/gripper_controller.yaml\n'}
+[5.299981] (gz_ros2_control_demos) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos//config/tricycle_drive_controller.yaml\n'}
+[5.300112] (gz_ros2_control_demos) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos//urdf/test_ackermann_drive.xacro.urdf\n'}
+[5.300170] (gz_ros2_control_demos) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos//urdf/test_cart_effort.xacro.urdf\n'}
+[5.300228] (gz_ros2_control_demos) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos//urdf/test_cart_position.xacro.urdf\n'}
+[5.300287] (gz_ros2_control_demos) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos//urdf/test_cart_velocity.xacro.urdf\n'}
+[5.300343] (gz_ros2_control_demos) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos//urdf/test_diff_drive.xacro.urdf\n'}
+[5.300405] (gz_ros2_control_demos) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos//urdf/test_gripper_mimic_joint.xacro.urdf\n'}
+[5.300460] (gz_ros2_control_demos) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos//urdf/test_pendulum_effort.xacro.urdf\n'}
+[5.300518] (gz_ros2_control_demos) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos//urdf/test_pendulum_position.xacro.urdf\n'}
+[5.300575] (gz_ros2_control_demos) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos//urdf/test_tricycle_drive.xacro.urdf\n'}
+[5.300725] (gz_ros2_control_demos) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/lib/gz_ros2_control_demos/example_position\n'}
+[5.300802] (gz_ros2_control_demos) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/lib/gz_ros2_control_demos/example_velocity\n'}
+[5.300892] (gz_ros2_control_demos) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/lib/gz_ros2_control_demos/example_effort\n'}
+[5.300969] (gz_ros2_control_demos) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/lib/gz_ros2_control_demos/example_diff_drive\n'}
+[5.301044] (gz_ros2_control_demos) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/lib/gz_ros2_control_demos/example_tricycle_drive\n'}
+[5.301119] (gz_ros2_control_demos) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/lib/gz_ros2_control_demos/example_ackermann_drive\n'}
+[5.301191] (gz_ros2_control_demos) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/lib/gz_ros2_control_demos/example_gripper\n'}
+[5.301293] (gz_ros2_control_demos) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/share/ament_index/resource_index/package_run_dependencies/gz_ros2_control_demos\n'}
+[5.301387] (gz_ros2_control_demos) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/share/ament_index/resource_index/parent_prefix_path/gz_ros2_control_demos\n'}
+[5.301486] (gz_ros2_control_demos) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos/environment/ament_prefix_path.sh\n'}
+[5.301564] (gz_ros2_control_demos) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos/environment/ament_prefix_path.dsv\n'}
+[5.301656] (gz_ros2_control_demos) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos/environment/path.sh\n'}
+[5.301729] (gz_ros2_control_demos) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos/environment/path.dsv\n'}
+[5.301803] (gz_ros2_control_demos) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos/local_setup.bash\n'}
+[5.301891] (gz_ros2_control_demos) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos/local_setup.sh\n'}
+[5.301969] (gz_ros2_control_demos) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos/local_setup.zsh\n'}
+[5.302040] (gz_ros2_control_demos) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos/local_setup.dsv\n'}
+[5.302092] (gz_ros2_control_demos) StdoutLine: {'line': b'-- Symlinking: /ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos/package.dsv\n'}
+[5.309014] (gz_ros2_control_demos) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/share/ament_index/resource_index/packages/gz_ros2_control_demos\n'}
+[5.309164] (gz_ros2_control_demos) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos/cmake/gz_ros2_control_demosConfig.cmake\n'}
+[5.309267] (gz_ros2_control_demos) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos/cmake/gz_ros2_control_demosConfig-version.cmake\n'}
+[5.309417] (gz_ros2_control_demos) StdoutLine: {'line': b'-- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos/package.xml\n'}
+[5.310843] (gz_ros2_control_demos) CommandEnded: {'returncode': 0}
+[5.312983] (-) TimerEvent: {}
+[5.326845] (gz_ros2_control_demos) JobEnded: {'identifier': 'gz_ros2_control_demos', 'rc': 0}
+[5.328203] (-) EventReactorShutdown: {}

@@ -12,7 +12,7 @@ import keyboard  # pip install keyboard
 class ControllerSwitcher(QWidget):
     def __init__(self):
         super().__init__()
-        self.current_controller = "leg_joint_trajectory_controller"
+        self.current_controller = "effort_controller"
         self.setWindowTitle("Controller Switcher")
         self.label = QLabel(f"Active Controller: {self.current_controller}")
         self.label.setAlignment(Qt.AlignCenter)

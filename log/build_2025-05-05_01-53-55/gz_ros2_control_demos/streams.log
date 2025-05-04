@@ -1,0 +1,101 @@
+[0.014s] Invoking command in '/ros2_ws/src/build/gz_ros2_control_demos': CMAKE_PREFIX_PATH=/ros2_ws/src/install/gz_ros2_control:/ros2_ws/src/install/gz_ros2_control_tests:/ros2_ws/src/install/gz_ros2_control_demos:/ros2_ws/src/install/biped:/opt/ros/humble /usr/bin/cmake --build /ros2_ws/src/build/gz_ros2_control_demos -- -j16 -l16
+[0.034s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.143s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.148s] -- Found control_msgs: 4.8.0 (/opt/ros/humble/share/control_msgs/cmake)
+[0.167s] -- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.169s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.173s] -- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.178s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.186s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.263s] -- Found rclcpp: 16.0.12 (/opt/ros/humble/share/rclcpp/cmake)
+[0.278s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.279s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.376s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.399s] -- Found rclcpp_action: 16.0.12 (/opt/ros/humble/share/rclcpp_action/cmake)
+[0.408s] -- Found ament_cmake_gtest: 1.3.11 (/opt/ros/humble/share/ament_cmake_gtest/cmake)
+[0.408s] -- Found ament_lint_auto: 0.12.12 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.472s] -- Added test 'copyright' to check source files copyright and LICENSE
+[0.473s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[0.473s] -- Configured cppcheck include dirs: 
+[0.473s] -- Configured cppcheck exclude dirs and/or files: 
+[0.475s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[0.475s] -- Configured cpplint exclude dirs and/or files: 
+[0.475s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.476s] -- Added test 'lint_cmake' to check CMake code style
+[0.476s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[0.477s] -- Added test 'uncrustify' to check C / C++ code style
+[0.477s] -- Configured uncrustify additional arguments: 
+[0.477s] -- Added test 'xmllint' to check XML markup files
+[0.478s] -- Configuring done
+[0.502s] -- Generating done
+[0.512s] -- Build files have been written to: /ros2_ws/src/build/gz_ros2_control_demos
+[0.547s] [35m[1mConsolidate compiler generated dependencies of target example_tricycle_drive[0m
+[0.547s] [35m[1mConsolidate compiler generated dependencies of target example_diff_drive[0m
+[0.548s] [35m[1mConsolidate compiler generated dependencies of target example_ackermann_drive[0m
+[0.548s] [35m[1mConsolidate compiler generated dependencies of target example_gripper[0m
+[0.548s] [35m[1mConsolidate compiler generated dependencies of target example_velocity[0m
+[0.548s] [35m[1mConsolidate compiler generated dependencies of target example_position[0m
+[0.548s] [35m[1mConsolidate compiler generated dependencies of target example_effort[0m
+[0.567s] [ 57%] Built target example_diff_drive
+[0.567s] [ 57%] [32mBuilding CXX object CMakeFiles/example_gripper.dir/examples/example_gripper.cpp.o[0m
+[0.567s] [ 71%] Built target example_ackermann_drive
+[0.567s] [ 57%] [32mBuilding CXX object CMakeFiles/example_tricycle_drive.dir/examples/example_tricycle_drive.cpp.o[0m
+[0.567s] [ 57%] Built target example_velocity
+[0.567s] [ 71%] Built target example_effort
+[0.572s] [ 85%] Built target example_position
+[3.735s] [ 92%] [32m[1mLinking CXX executable example_tricycle_drive[0m
+[3.737s] [100%] [32m[1mLinking CXX executable example_gripper[0m
+[3.889s] [100%] Built target example_tricycle_drive
+[3.889s] [100%] Built target example_gripper
+[3.898s] Invoked command in '/ros2_ws/src/build/gz_ros2_control_demos' returned '0': CMAKE_PREFIX_PATH=/ros2_ws/src/install/gz_ros2_control:/ros2_ws/src/install/gz_ros2_control_tests:/ros2_ws/src/install/gz_ros2_control_demos:/ros2_ws/src/install/biped:/opt/ros/humble /usr/bin/cmake --build /ros2_ws/src/build/gz_ros2_control_demos -- -j16 -l16
+[3.899s] Invoking command in '/ros2_ws/src/build/gz_ros2_control_demos': CMAKE_PREFIX_PATH=/ros2_ws/src/install/gz_ros2_control:/ros2_ws/src/install/gz_ros2_control_tests:/ros2_ws/src/install/gz_ros2_control_demos:/ros2_ws/src/install/biped:/opt/ros/humble /usr/bin/cmake --install /ros2_ws/src/build/gz_ros2_control_demos
+[3.905s] -- Install configuration: ""
+[3.905s] -- Execute custom install script
+[3.906s] -- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos//launch/ackermann_drive_example.launch.py
+[3.906s] -- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos//launch/cart_example_effort.launch.py
+[3.906s] -- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos//launch/cart_example_position.launch.py
+[3.906s] -- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos//launch/cart_example_velocity.launch.py
+[3.906s] -- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos//launch/diff_drive_example.launch.py
+[3.906s] -- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos//launch/gripper_mimic_joint_example.launch.py
+[3.906s] -- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos//launch/pendulum_example_effort.launch.py
+[3.906s] -- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos//launch/pendulum_example_position.launch.py
+[3.906s] -- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos//launch/tricycle_drive_example.launch.py
+[3.906s] -- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos//config/ackermann_drive_controller.yaml
+[3.906s] -- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos//config/cart_controller_effort.yaml
+[3.906s] -- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos//config/cart_controller_position.yaml
+[3.906s] -- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos//config/cart_controller_velocity.yaml
+[3.906s] -- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos//config/diff_drive_controller_velocity.yaml
+[3.906s] -- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos//config/gripper_controller.yaml
+[3.906s] -- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos//config/tricycle_drive_controller.yaml
+[3.907s] -- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos//urdf/test_ackermann_drive.xacro.urdf
+[3.907s] -- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos//urdf/test_cart_effort.xacro.urdf
+[3.907s] -- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos//urdf/test_cart_position.xacro.urdf
+[3.907s] -- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos//urdf/test_cart_velocity.xacro.urdf
+[3.907s] -- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos//urdf/test_diff_drive.xacro.urdf
+[3.907s] -- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos//urdf/test_gripper_mimic_joint.xacro.urdf
+[3.907s] -- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos//urdf/test_pendulum_effort.xacro.urdf
+[3.907s] -- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos//urdf/test_pendulum_position.xacro.urdf
+[3.907s] -- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos//urdf/test_tricycle_drive.xacro.urdf
+[3.907s] -- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/lib/gz_ros2_control_demos/example_position
+[3.907s] -- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/lib/gz_ros2_control_demos/example_velocity
+[3.907s] -- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/lib/gz_ros2_control_demos/example_effort
+[3.907s] -- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/lib/gz_ros2_control_demos/example_diff_drive
+[3.908s] -- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/lib/gz_ros2_control_demos/example_tricycle_drive
+[3.908s] -- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/lib/gz_ros2_control_demos/example_ackermann_drive
+[3.908s] -- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/lib/gz_ros2_control_demos/example_gripper
+[3.908s] -- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/share/ament_index/resource_index/package_run_dependencies/gz_ros2_control_demos
+[3.908s] -- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/share/ament_index/resource_index/parent_prefix_path/gz_ros2_control_demos
+[3.908s] -- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos/environment/ament_prefix_path.sh
+[3.908s] -- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos/environment/ament_prefix_path.dsv
+[3.908s] -- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos/environment/path.sh
+[3.908s] -- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos/environment/path.dsv
+[3.908s] -- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos/local_setup.bash
+[3.908s] -- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos/local_setup.sh
+[3.908s] -- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos/local_setup.zsh
+[3.909s] -- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos/local_setup.dsv
+[3.909s] -- Symlinking: /ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos/package.dsv
+[3.916s] -- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/share/ament_index/resource_index/packages/gz_ros2_control_demos
+[3.916s] -- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos/cmake/gz_ros2_control_demosConfig.cmake
+[3.916s] -- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos/cmake/gz_ros2_control_demosConfig-version.cmake
+[3.916s] -- Up-to-date symlink: /ros2_ws/src/install/gz_ros2_control_demos/share/gz_ros2_control_demos/package.xml
+[3.918s] Invoked command in '/ros2_ws/src/build/gz_ros2_control_demos' returned '0': CMAKE_PREFIX_PATH=/ros2_ws/src/install/gz_ros2_control:/ros2_ws/src/install/gz_ros2_control_tests:/ros2_ws/src/install/gz_ros2_control_demos:/ros2_ws/src/install/biped:/opt/ros/humble /usr/bin/cmake --install /ros2_ws/src/build/gz_ros2_control_demos
