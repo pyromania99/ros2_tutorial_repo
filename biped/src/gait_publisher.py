@@ -14,12 +14,10 @@ import sys
 from PyQt5.QtWidgets import QApplication, QWidget, QSlider, QLabel, QVBoxLayout, QHBoxLayout, QGridLayout, QCheckBox, QPushButton, QMainWindow
 from PyQt5.QtCore import Qt, QTimer
 
-# Matplotlib integration with PyQt5
 class MplCanvas(FigureCanvas):
     def __init__(self, parent=None, width=5, height=4, dpi=100):
         self.fig = Figure(figsize=(width, height), dpi=dpi)
         self.axes = self.fig.add_subplot(111, projection='3d')
-        
         super(MplCanvas, self).__init__(self.fig)
 
 class FootPositionGUI(QMainWindow):
@@ -28,40 +26,34 @@ class FootPositionGUI(QMainWindow):
         self.setWindowTitle("Foot Position Control")
         self.resize(900, 700)
         
-        # Initialize position values
         self.left_x = 0.0
-        self.left_y = 0.5
+        self.left_y = 0.0
         self.right_x = 0.0
-        self.right_y = 0.5
-        self.manual_mode = True  # Start in manual mode
+        self.right_y = 0.0
+        self.manual_mode = True
         
-        # Create main widget and layout
         main_widget = QWidget()
         self.setCentralWidget(main_widget)
         main_layout = QVBoxLayout(main_widget)
         
-        # Mode selection
         mode_layout = QHBoxLayout()
         self.mode_checkbox = QCheckBox("Manual Control")
         self.mode_checkbox.setChecked(self.manual_mode)
         self.mode_checkbox.stateChanged.connect(self.toggle_mode)
         mode_layout.addWidget(self.mode_checkbox)
         
-        # Reset button
         self.reset_button = QPushButton("Reset Positions")
         self.reset_button.clicked.connect(self.reset_positions)
         mode_layout.addWidget(self.reset_button)
         
         main_layout.addLayout(mode_layout)
         
-        # Create slider layout
         slider_layout = QGridLayout()
         
-        # Create sliders for left foot
         slider_layout.addWidget(QLabel("Left Foot X Position"), 0, 0)
         self.left_x_slider = QSlider(Qt.Horizontal)
-        self.left_x_slider.setMinimum(-40)
-        self.left_x_slider.setMaximum(40)
+        self.left_x_slider.setMinimum(-70)
+        self.left_x_slider.setMaximum(70)
         self.left_x_slider.setValue(int(self.left_x * 100))
         self.left_x_slider.setTickPosition(QSlider.TicksBelow)
         self.left_x_slider.setTickInterval(10)
@@ -70,11 +62,10 @@ class FootPositionGUI(QMainWindow):
         self.left_x_label = QLabel(f"X: {self.left_x:.2f}")
         slider_layout.addWidget(self.left_x_label, 0, 2)
         
-        # ...add other sliders similarly...
         slider_layout.addWidget(QLabel("Left Foot Y Position"), 1, 0)
         self.left_y_slider = QSlider(Qt.Horizontal)
-        self.left_y_slider.setMinimum(0)
-        self.left_y_slider.setMaximum(100)
+        self.left_y_slider.setMinimum(5)
+        self.left_y_slider.setMaximum(70)
         self.left_y_slider.setValue(int(self.left_y * 100))
         self.left_y_slider.setTickPosition(QSlider.TicksBelow)
         self.left_y_slider.setTickInterval(10)
@@ -85,8 +76,8 @@ class FootPositionGUI(QMainWindow):
         
         slider_layout.addWidget(QLabel("Right Foot X Position"), 2, 0)
         self.right_x_slider = QSlider(Qt.Horizontal)
-        self.right_x_slider.setMinimum(-40)
-        self.right_x_slider.setMaximum(40)
+        self.right_x_slider.setMinimum(-70)
+        self.right_x_slider.setMaximum(70)
         self.right_x_slider.setValue(int(self.right_x * 100))
         self.right_x_slider.setTickPosition(QSlider.TicksBelow)
         self.right_x_slider.setTickInterval(10)
@@ -97,8 +88,8 @@ class FootPositionGUI(QMainWindow):
         
         slider_layout.addWidget(QLabel("Right Foot Y Position"), 3, 0)
         self.right_y_slider = QSlider(Qt.Horizontal)
-        self.right_y_slider.setMinimum(0)
-        self.right_y_slider.setMaximum(100)
+        self.right_y_slider.setMinimum(5)
+        self.right_y_slider.setMaximum(70)
         self.right_y_slider.setValue(int(self.right_y * 100))
         self.right_y_slider.setTickPosition(QSlider.TicksBelow)
         self.right_y_slider.setTickInterval(10)
@@ -107,7 +98,6 @@ class FootPositionGUI(QMainWindow):
         self.right_y_label = QLabel(f"Y: {self.right_y:.2f}")
         slider_layout.addWidget(self.right_y_label, 3, 2)
         
-        # Add status label
         self.status_label = QLabel("Mode: Manual Control")
         self.status_label.setAlignment(Qt.AlignCenter)
         self.status_label.setStyleSheet("font-weight: bold; color: blue;")
@@ -115,18 +105,15 @@ class FootPositionGUI(QMainWindow):
         main_layout.addLayout(slider_layout)
         main_layout.addWidget(self.status_label)
         
-        # Add Matplotlib canvas to layout
         self.canvas = MplCanvas(self, width=5, height=4, dpi=100)
         main_layout.addWidget(self.canvas)
         
-        # Initialize trajectory history
         self.left_foot_history = []
         self.right_foot_history = []
         
-        # Setup plot refresh timer
         self.plot_timer = QTimer()
         self.plot_timer.timeout.connect(self.update_plot)
-        self.plot_timer.start(100)  # Refresh plot every 100ms
+        self.plot_timer.start(100)
         
     def update_left_x(self, value):
         self.left_x = value / 100.0
@@ -149,7 +136,6 @@ class FootPositionGUI(QMainWindow):
         mode_text = "Manual Control" if self.manual_mode else "Trajectory Mode"
         self.status_label.setText(f"Mode: {mode_text}")
         
-        # Update slider enabled state
         enabled = self.manual_mode
         self.left_x_slider.setEnabled(enabled)
         self.left_y_slider.setEnabled(enabled)
@@ -157,13 +143,11 @@ class FootPositionGUI(QMainWindow):
         self.right_y_slider.setEnabled(enabled)
     
     def reset_positions(self):
-        # Reset to default positions
         self.left_x = 0.0
-        self.left_y = 0.5
+        self.left_y = 0.0
         self.right_x = 0.0
-        self.right_y = 0.5
+        self.right_y = 0.0
         
-        # Update sliders
         self.left_x_slider.setValue(int(self.left_x * 100))
         self.left_y_slider.setValue(int(self.left_y * 100))
         self.right_x_slider.setValue(int(self.right_x * 100))
@@ -188,7 +172,6 @@ class FootPositionGUI(QMainWindow):
             self.canvas.axes.plot(lz, lx, ly, 'r', label='Left Foot')
             self.canvas.axes.plot(rz, rx, ry, 'b', label='Right Foot')
             
-            # Adjust limits based on what's being shown
             self.canvas.axes.set_xlim(min_time, max_time)
             self.canvas.axes.set_ylim(-0.4, 0.4)
             self.canvas.axes.set_zlim(0, 1.0)
@@ -206,34 +189,27 @@ class FootPositionGUI(QMainWindow):
 class GaitIKPublisher(Node):
     def __init__(self, gui):
         super().__init__('gait_ik_publisher')
-
-        # Store the GUI reference
         self.gui = gui
         
-        # Publishers
         self.publisher = self.create_publisher(Float64MultiArray, '/target_positions', 10)
         self.marker_publisher = self.create_publisher(MarkerArray, '/foot_trajectory_markers', 10)
         
-        # Initialize required variables
         self.step_index = 0
+        self.thigh = 0.36
+        self.shin = 0.31
+
         self.gait_trajectory = self.generate_gait_trajectory()
-        self.hip_height = 0.6  # Height from ground to hip
-
-        self.thigh = 0.315
-        self.shin = 0.329
         
-        # Set default foot positions
-        self.left_foot = (0.0, 0.5)
-        self.right_foot = (0.0, 0.5)
+        self.left_foot = (0.0, 0.0)
+        self.right_foot = (0.0, 0.0)
 
-        # Create Qt timers instead of ROS timers
         self.control_timer = QTimer()
         self.control_timer.timeout.connect(self.timer_callback)
-        self.control_timer.start(50)  # 50ms = 20Hz
+        self.control_timer.start(50)
         
         self.marker_timer = QTimer()
         self.marker_timer.timeout.connect(self.publish_trajectory_markers)
-        self.marker_timer.start(500)  # 500ms = 2Hz
+        self.marker_timer.start(500)
         
         self.get_logger().info('Gait IK Publisher started.')
 
@@ -241,44 +217,76 @@ class GaitIKPublisher(Node):
         step_count = 200
         step_length = 0.2
         step_height = 0.05
-        support_points = 20
+        support_ratio = 0.6
         
-        swing_count = step_count - support_points
-        swing_x = np.linspace(-step_length / 2, step_length / 2, swing_count)
-        swing_y = step_height * np.sin(np.pi * np.linspace(0, 1, swing_count))
+        leg_length = self.thigh + self.shin
         
-        support_x = np.full(support_points, -step_length / 2)
-        support_y = np.zeros(support_points)
+        support_points = int(step_count * support_ratio)
+        swing_points = step_count - support_points
         
-        x = np.concatenate([swing_x, support_x])
-        y = np.concatenate([swing_y, support_y])
+        support_x = np.linspace(step_length/2, -step_length/2, support_points)
+        support_y = np.zeros(support_points)-leg_length
+        
+        swing_x = np.linspace(-step_length/2, step_length/2, swing_points)
+        swing_y = step_height * np.sin(np.pi * np.linspace(0, 1, swing_points))-leg_length
+        
+        x = np.concatenate([support_x, swing_x])
+        y = np.concatenate([support_y, swing_y])
         
         return list(zip(x, y))
 
     def inverse_kinematics(self, foot_pos):
         x, y = foot_pos
         L1, L2 = self.thigh, self.shin
+
         dist = math.sqrt(x**2 + y**2)
-        dist = min(dist, L1 + L2 - 1e-5)
+        dist = max(min(dist, L1 + L2), 1e-5)
+        cos_knee = (L1**2 + L2**2 - dist**2) / (2 * L1 * L2)
+        cos_knee = max(min(cos_knee, 1.0), -1.0)
 
-        cos_knee = (dist**2 - L1**2 - L2**2) / (2 * L1 * L2)
-        knee_angle = math.acos(cos_knee)
+        interior_knee_angle = math.acos(cos_knee)
+        
+        bending_forward = True
+        if y > 0 and dist < (L1 + L2) * 0.98:
+            bending_forward = False
+            
+        knee_angle = math.pi - interior_knee_angle
+        
+        if not bending_forward:
+            knee_angle = -knee_angle
+        
+        target_angle = math.atan2(y, x) + math.pi/2
+        cos_hip_internal = (L1**2 + dist**2 - L2**2) / (2 * L1 * dist)
+        cos_hip_internal = max(min(cos_hip_internal, 1.0), -1.0)
+        hip_internal_angle = math.acos(cos_hip_internal)
+        
+        hip_angle = target_angle - hip_internal_angle
+        
+        return [hip_angle, knee_angle]
 
-        angle_to_foot = math.atan2(y, x)
-        cos_hip = (L1**2 + dist**2 - L2**2) / (2 * L1 * dist)
-        hip_offset = math.acos(cos_hip)
-        hip_angle = angle_to_foot - hip_offset
-
-        return [hip_angle, -knee_angle]
+    def calculate_knee_position(self, foot_pos, angles, leg_side):
+        hip_angle, knee_angle = angles
+        
+        hip_y_offset = 0.1 if leg_side == 'left' else -0.1
+        hip_pos = [0.0, hip_y_offset, 0.0]
+        
+        if leg_side == 'right':
+            hip_angle = -hip_angle
+        
+        knee_x = hip_pos[0] + self.thigh * math.sin(hip_angle)
+        knee_y = hip_pos[1]
+        knee_z = hip_pos[2] - self.thigh * math.cos(hip_angle)
+        
+        return knee_x, knee_y, knee_z
 
     def timer_callback(self):
         manual_mode = self.gui.get_manual_mode()
         
         if manual_mode:
-            # Get position values from GUI sliders
-            self.left_foot, self.right_foot = self.gui.get_positions()
+            left_pos, right_pos = self.gui.get_positions()
+            self.left_foot = (left_pos[0], left_pos[1] - (self.thigh + self.shin))
+            self.right_foot = (right_pos[0], right_pos[1] - (self.thigh + self.shin))
         else:
-            # Use trajectory mode
             num_steps = len(self.gait_trajectory)
             left_idx = self.step_index % num_steps
             right_idx = (self.step_index + num_steps // 2) % num_steps
@@ -286,31 +294,26 @@ class GaitIKPublisher(Node):
             self.left_foot = self.gait_trajectory[left_idx]
             self.right_foot = self.gait_trajectory[right_idx]
         
-        # Compute joint angles for both legs using inverse kinematics
         left_angles = self.inverse_kinematics(self.left_foot)
         right_angles = self.inverse_kinematics(self.right_foot)
 
-        # Log info at a reduced rate
-        if self.step_index % 20 == 0:
+        if self.step_index % 100 == 0:
             mode_str = "Manual" if manual_mode else "Trajectory"
             self.get_logger().info(f"Mode: {mode_str}")
             self.get_logger().info(f"Left foot position: {self.left_foot}")
             self.get_logger().info(f"Right foot position: {self.right_foot}")
 
-        # Publish joint commands
         joint_cmds = Float64MultiArray()
         joint_cmds.data = [
             0.0, left_angles[0], left_angles[1],
-            0.0, right_angles[0], right_angles[1]
+            0.0, -right_angles[0], right_angles[1]
         ]
         self.publisher.publish(joint_cmds)
 
-        # Store foot positions for trajectory visualization
-        timestamp = self.step_index * 0.05  # timer_period
+        timestamp = self.step_index * 0.05
         self.gui.left_foot_history.append((self.left_foot[0], self.left_foot[1], timestamp))
         self.gui.right_foot_history.append((self.right_foot[0], self.right_foot[1], timestamp))
         
-        # Limit history size to avoid memory issues
         if len(self.gui.left_foot_history) > 500:
             self.gui.left_foot_history.pop(0)
             self.gui.right_foot_history.pop(0)
@@ -320,7 +323,6 @@ class GaitIKPublisher(Node):
     def publish_trajectory_markers(self):
         marker_array = MarkerArray()
         
-        # Create a marker for the left foot trajectory
         left_marker = Marker()
         left_marker.header.frame_id = "base_link"
         left_marker.header.stamp = self.get_clock().now().to_msg()
@@ -329,10 +331,9 @@ class GaitIKPublisher(Node):
         left_marker.type = Marker.LINE_STRIP
         left_marker.action = Marker.ADD
         left_marker.pose.orientation.w = 1.0
-        left_marker.scale.x = 0.02  # Line width
-        left_marker.color = ColorRGBA(r=1.0, g=0.0, b=0.0, a=1.0)  # Red
+        left_marker.scale.x = 0.02
+        left_marker.color = ColorRGBA(r=1.0, g=0.0, b=0.0, a=1.0)
         
-        # Create a marker for the right foot trajectory
         right_marker = Marker()
         right_marker.header.frame_id = "base_link"
         right_marker.header.stamp = self.get_clock().now().to_msg()
@@ -341,55 +342,47 @@ class GaitIKPublisher(Node):
         right_marker.type = Marker.LINE_STRIP
         right_marker.action = Marker.ADD
         right_marker.pose.orientation.w = 1.0
-        right_marker.scale.x = 0.02  # Line width
-        right_marker.color = ColorRGBA(r=0.0, g=0.0, b=1.0, a=1.0)  # Blue
+        right_marker.scale.x = 0.02
+        right_marker.color = ColorRGBA(r=0.0, g=0.0, b=1.0, a=1.0)
         
-        # Create marker contents based on current mode
         manual_mode = self.gui.get_manual_mode()
         
         if manual_mode:
-            # In manual mode, visualize recent history
             history = self.gui.left_foot_history
             history_length = min(len(history), 100)
             for i in range(max(0, len(history) - history_length), len(history)):
-                # Left foot history
                 left_point = Point()
                 left_point.x = history[i][0]
-                left_point.y = 0.1  # Lateral offset for left foot
-                left_point.z = self.hip_height - history[i][1]
+                left_point.y = 0.1
+                left_point.z = history[i][1]
                 left_marker.points.append(left_point)
                 
-                # Right foot history
                 right_point = Point()
                 right_point.x = self.gui.right_foot_history[i][0]
-                right_point.y = -0.1  # Lateral offset for right foot
-                right_point.z = self.hip_height - self.gui.right_foot_history[i][1]
+                right_point.y = -0.1
+                right_point.z = self.gui.right_foot_history[i][1]
                 right_marker.points.append(right_point)
         else:
-            # In trajectory mode, visualize the full gait trajectory
             num_steps = len(self.gait_trajectory)
             current_idx = self.step_index % num_steps
             
             for i in range(num_steps):
-                # Left foot trajectory points
                 left_idx = (current_idx + i) % num_steps
                 left_pos = self.gait_trajectory[left_idx]
                 left_point = Point()
                 left_point.x = left_pos[0]
-                left_point.y = 0.1  # Lateral offset for left foot
-                left_point.z = self.hip_height - left_pos[1]
+                left_point.y = 0.1
+                left_point.z = left_pos[1]
                 left_marker.points.append(left_point)
                 
-                # Right foot trajectory points
                 right_idx = (current_idx + i + num_steps // 2) % num_steps
                 right_pos = self.gait_trajectory[right_idx]
                 right_point = Point()
                 right_point.x = right_pos[0]
-                right_point.y = -0.1  # Lateral offset for right foot
-                right_point.z = self.hip_height - right_pos[1]
+                right_point.y = -0.1
+                right_point.z = right_pos[1]
                 right_marker.points.append(right_point)
         
-        # Add current position markers (spheres)
         current_left_marker = Marker()
         current_left_marker.header.frame_id = "base_link"
         current_left_marker.header.stamp = self.get_clock().now().to_msg()
@@ -401,11 +394,11 @@ class GaitIKPublisher(Node):
         current_left_marker.scale.x = 0.05
         current_left_marker.scale.y = 0.05
         current_left_marker.scale.z = 0.05
-        current_left_marker.color = ColorRGBA(r=1.0, g=1.0, b=0.0, a=1.0)  # Yellow
+        current_left_marker.color = ColorRGBA(r=1.0, g=1.0, b=0.0, a=1.0)
         
         current_left_marker.pose.position.x = self.left_foot[0]
         current_left_marker.pose.position.y = 0.1
-        current_left_marker.pose.position.z = self.hip_height - self.left_foot[1]
+        current_left_marker.pose.position.z = self.left_foot[1]
         
         current_right_marker = Marker()
         current_right_marker.header.frame_id = "base_link"
@@ -418,51 +411,121 @@ class GaitIKPublisher(Node):
         current_right_marker.scale.x = 0.05
         current_right_marker.scale.y = 0.05
         current_right_marker.scale.z = 0.05
-        current_right_marker.color = ColorRGBA(r=0.0, g=1.0, b=1.0, a=1.0)  # Cyan
+        current_right_marker.color = ColorRGBA(r=0.0, g=1.0, b=1.0, a=1.0)
         
         current_right_marker.pose.position.x = self.right_foot[0]
         current_right_marker.pose.position.y = -0.1
-        current_right_marker.pose.position.z = self.hip_height - self.right_foot[1]
+        current_right_marker.pose.position.z = self.right_foot[1]
         
-        # Add all markers to the array
+        left_knee_marker = Marker()
+        left_knee_marker.header.frame_id = "base_link"
+        left_knee_marker.header.stamp = self.get_clock().now().to_msg()
+        left_knee_marker.ns = "joint_markers"
+        left_knee_marker.id = 4
+        left_knee_marker.type = Marker.SPHERE
+        left_knee_marker.action = Marker.ADD
+        left_knee_marker.pose.orientation.w = 1.0
+        left_knee_marker.scale.x = 0.04
+        left_knee_marker.scale.y = 0.04
+        left_knee_marker.scale.z = 0.04
+        left_knee_marker.color = ColorRGBA(r=1.0, g=0.5, b=0.0, a=1.0)
+        
+        right_knee_marker = Marker()
+        right_knee_marker.header.frame_id = "base_link"
+        right_knee_marker.header.stamp = self.get_clock().now().to_msg()
+        right_knee_marker.ns = "joint_markers"
+        right_knee_marker.id = 5
+        right_knee_marker.type = Marker.SPHERE
+        right_knee_marker.action = Marker.ADD
+        right_knee_marker.pose.orientation.w = 1.0
+        right_knee_marker.scale.x = 0.04
+        right_knee_marker.scale.y = 0.04
+        right_knee_marker.scale.z = 0.04
+        right_knee_marker.color = ColorRGBA(r=0.0, g=0.5, b=1.0, a=1.0)
+        
+        left_angles = self.inverse_kinematics(self.left_foot)
+        right_angles = self.inverse_kinematics(self.right_foot)
+        
+        left_knee_pos = self.calculate_knee_position(self.left_foot, left_angles, 'left')
+        right_knee_pos = self.calculate_knee_position(self.right_foot, right_angles, 'right')
+        
+        left_knee_marker.pose.position.x = left_knee_pos[0]
+        left_knee_marker.pose.position.y = left_knee_pos[1]
+        left_knee_marker.pose.position.z = left_knee_pos[2]
+        
+        right_knee_marker.pose.position.x = right_knee_pos[0]
+        right_knee_marker.pose.position.y = right_knee_pos[1]
+        right_knee_marker.pose.position.z = right_knee_pos[2]
+        
+        left_leg_marker = Marker()
+        left_leg_marker.header.frame_id = "base_link"
+        left_leg_marker.header.stamp = self.get_clock().now().to_msg()
+        left_leg_marker.ns = "leg_links"
+        left_leg_marker.id = 6
+        left_leg_marker.type = Marker.LINE_LIST
+        left_leg_marker.action = Marker.ADD
+        left_leg_marker.pose.orientation.w = 1.0
+        left_leg_marker.scale.x = 0.02
+        left_leg_marker.color = ColorRGBA(r=0.7, g=0.7, b=0.7, a=1.0)
+        
+        hip_point = Point(x=0.0, y=0.1, z=0.0)
+        knee_point = Point(x=left_knee_pos[0], y=left_knee_pos[1], z=left_knee_pos[2])
+        foot_point = Point(x=self.left_foot[0], y=0.1, z=self.left_foot[1])
+        
+        left_leg_marker.points.append(hip_point)
+        left_leg_marker.points.append(knee_point)
+        left_leg_marker.points.append(knee_point)
+        left_leg_marker.points.append(foot_point)
+        
+        right_leg_marker = Marker()
+        right_leg_marker.header.frame_id = "base_link"
+        right_leg_marker.header.stamp = self.get_clock().now().to_msg()
+        right_leg_marker.ns = "leg_links"
+        right_leg_marker.id = 7
+        right_leg_marker.type = Marker.LINE_LIST
+        right_leg_marker.action = Marker.ADD
+        right_leg_marker.pose.orientation.w = 1.0
+        right_leg_marker.scale.x = 0.02
+        right_leg_marker.color = ColorRGBA(r=0.7, g=0.7, b=0.7, a=1.0)
+        
+        hip_point = Point(x=0.0, y=-0.1, z=0.0)
+        knee_point = Point(x=right_knee_pos[0], y=right_knee_pos[1], z=right_knee_pos[2])
+        foot_point = Point(x=self.right_foot[0], y=-0.1, z=self.right_foot[1])
+        
+        right_leg_marker.points.append(hip_point)
+        right_leg_marker.points.append(knee_point)
+        right_leg_marker.points.append(knee_point)
+        right_leg_marker.points.append(foot_point)
+        
         marker_array.markers.append(left_marker)
         marker_array.markers.append(right_marker)
         marker_array.markers.append(current_left_marker)
         marker_array.markers.append(current_right_marker)
+        marker_array.markers.append(left_knee_marker)
+        marker_array.markers.append(right_knee_marker)
+        marker_array.markers.append(left_leg_marker)
+        marker_array.markers.append(right_leg_marker)
         
-        # Publish the marker array
         self.marker_publisher.publish(marker_array)
 
 
 def main(args=None):
-    # Initialize ROS and create node
     rclpy.init(args=args)
-    
-    # Initialize QApplication
     app = QApplication(sys.argv)
-    
-    # Create GUI
     gui = FootPositionGUI()
     gui.show()
-    
-    # Create the ROS node with a reference to the GUI
     node = GaitIKPublisher(gui)
-    
-    # Create executor for processing ROS callbacks in the background
     executor = SingleThreadedExecutor()
     executor.add_node(node)
     
-    # Timer to process ROS callbacks
     ros_timer = QTimer()
     def process_ros():
         executor.spin_once(timeout_sec=0)
     ros_timer.timeout.connect(process_ros)
-    ros_timer.start(10)  # Process ROS callbacks every 10ms
+    ros_timer.start(10)
     
-    # Start Qt event loop
     exit_code = app.exec_()
     
-    # Clean up ROS resources
     executor.shutdown()
     node.destroy_node()
     rclpy.shutdown()
