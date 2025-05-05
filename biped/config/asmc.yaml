@@ -1,37 +1,37 @@
 asmc_effort_publisher:
   ros__parameters:
     # Parameters for left hip joint 1
-    left_hip1_joint.lambda: 5.0  # Lambda gain
+    left_hip1_joint.lambda: 1.0  # Lambda gain
     left_hip1_joint.alpha0: 0.1  # Adaptation gain for K0
     left_hip1_joint.alpha1: 0.1  # Adaptation gain for K1
     left_hip1_joint.target: 0.0  # Target position
 
     # Parameters for left hip joint 2
-    left_hip2_joint.lambda: 5.0
+    left_hip2_joint.lambda: 1.0
     left_hip2_joint.alpha0: 0.1
     left_hip2_joint.alpha1: 0.1
     left_hip2_joint.target: 0.0
 
     # Parameters for left knee joint
-    left_knee_joint.lambda: 5.0
+    left_knee_joint.lambda: 1.0
     left_knee_joint.alpha0: 0.1
     left_knee_joint.alpha1: 0.1
     left_knee_joint.target: 0.0
 
     # Parameters for right hip joint 1
-    right_hip1_joint.lambda: 5.0
+    right_hip1_joint.lambda: 1.0
     right_hip1_joint.alpha0: 0.1
     right_hip1_joint.alpha1: 0.1
     right_hip1_joint.target: 0.0
 
     # Parameters for right hip joint 2
-    right_hip2_joint.lambda: 5.0
+    right_hip2_joint.lambda: 1.0
     right_hip2_joint.alpha0: 0.1
     right_hip2_joint.alpha1: 0.1
     right_hip2_joint.target: 0.0
 
     # Parameters for right knee joint
-    right_knee_joint.lambda: 5.0
+    right_knee_joint.lambda: 1.0
     right_knee_joint.alpha0: 0.1
     right_knee_joint.alpha1: 0.1
     right_knee_joint.target: 0.0

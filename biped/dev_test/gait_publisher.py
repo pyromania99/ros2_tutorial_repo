@@ -64,7 +64,7 @@ class FootPositionGUI(QMainWindow):
         
         slider_layout.addWidget(QLabel("Left Foot Y Position"), 1, 0)
         self.left_y_slider = QSlider(Qt.Horizontal)
-        self.left_y_slider.setMinimum(5)
+        self.left_y_slider.setMinimum(0)
         self.left_y_slider.setMaximum(70)
         self.left_y_slider.setValue(int(self.left_y * 100))
         self.left_y_slider.setTickPosition(QSlider.TicksBelow)
@@ -88,7 +88,7 @@ class FootPositionGUI(QMainWindow):
         
         slider_layout.addWidget(QLabel("Right Foot Y Position"), 3, 0)
         self.right_y_slider = QSlider(Qt.Horizontal)
-        self.right_y_slider.setMinimum(5)
+        self.right_y_slider.setMinimum(0)
         self.right_y_slider.setMaximum(70)
         self.right_y_slider.setValue(int(self.right_y * 100))
         self.right_y_slider.setTickPosition(QSlider.TicksBelow)
@@ -195,8 +195,8 @@ class GaitIKPublisher(Node):
         self.marker_publisher = self.create_publisher(MarkerArray, '/foot_trajectory_markers', 10)
         
         self.step_index = 0
-        self.thigh = 0.36
-        self.shin = 0.31
+        self.thigh = 0.3
+        self.shin = 0.34
 
         self.gait_trajectory = self.generate_gait_trajectory()
         
@@ -219,7 +219,7 @@ class GaitIKPublisher(Node):
         step_height = 0.05
         support_ratio = 0.6
         
-        leg_length = self.thigh + self.shin
+        leg_length = self.thigh + self.shin - 0.07
         
         support_points = int(step_count * support_ratio)
         swing_points = step_count - support_points
@@ -238,7 +238,7 @@ class GaitIKPublisher(Node):
     def inverse_kinematics(self, foot_pos):
         x, y = foot_pos
         L1, L2 = self.thigh, self.shin
-
+    
         dist = math.sqrt(x**2 + y**2)
         dist = max(min(dist, L1 + L2), 1e-5)
         cos_knee = (L1**2 + L2**2 - dist**2) / (2 * L1 * L2)
@@ -268,7 +268,7 @@ class GaitIKPublisher(Node):
         hip_angle, knee_angle = angles
         
         hip_y_offset = 0.1 if leg_side == 'left' else -0.1
-        hip_pos = [0.0, hip_y_offset, 0.0]
+        hip_pos = [-0.05, hip_y_offset, -0.1]
         
         if leg_side == 'right':
             hip_angle = -hip_angle
@@ -284,8 +284,8 @@ class GaitIKPublisher(Node):
         
         if manual_mode:
             left_pos, right_pos = self.gui.get_positions()
-            self.left_foot = (left_pos[0], left_pos[1] - (self.thigh + self.shin))
-            self.right_foot = (right_pos[0], right_pos[1] - (self.thigh + self.shin))
+            self.left_foot = (left_pos[0]-0.05, left_pos[1] - (self.thigh + self.shin))
+            self.right_foot = (right_pos[0]-0.05, right_pos[1] - (self.thigh + self.shin))
         else:
             num_steps = len(self.gait_trajectory)
             left_idx = self.step_index % num_steps
@@ -468,7 +468,7 @@ class GaitIKPublisher(Node):
         left_leg_marker.scale.x = 0.02
         left_leg_marker.color = ColorRGBA(r=0.7, g=0.7, b=0.7, a=1.0)
         
-        hip_point = Point(x=0.0, y=0.1, z=0.0)
+        hip_point = Point(x=-0.05, y=0.1, z=-0.1)
         knee_point = Point(x=left_knee_pos[0], y=left_knee_pos[1], z=left_knee_pos[2])
         foot_point = Point(x=self.left_foot[0], y=0.1, z=self.left_foot[1])
         
@@ -488,7 +488,7 @@ class GaitIKPublisher(Node):
         right_leg_marker.scale.x = 0.02
         right_leg_marker.color = ColorRGBA(r=0.7, g=0.7, b=0.7, a=1.0)
         
-        hip_point = Point(x=0.0, y=-0.1, z=0.0)
+        hip_point = Point(x=-0.05, y=-0.1, z=-0.1)
         knee_point = Point(x=right_knee_pos[0], y=right_knee_pos[1], z=right_knee_pos[2])
         foot_point = Point(x=self.right_foot[0], y=-0.1, z=self.right_foot[1])
         
