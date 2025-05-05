@@ -17,6 +17,7 @@
 /ros2_ws/src/install/biped/share/biped/meshes/right_tibia.stl
 /ros2_ws/src/install/biped/share/biped/src/controller_switcher.py
 /ros2_ws/src/install/biped/share/biped/src/effort_asmc.py
+/ros2_ws/src/install/biped/share/biped/src/gait_publisher.py
 /ros2_ws/src/install/biped/share/biped/src/leg_slider_gui.py
 /ros2_ws/src/install/biped/share/ament_index/resource_index/package_run_dependencies/biped
 /ros2_ws/src/install/biped/share/ament_index/resource_index/parent_prefix_path/biped

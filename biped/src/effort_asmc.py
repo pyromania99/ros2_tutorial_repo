@@ -6,6 +6,8 @@ from sensor_msgs.msg import JointState
 from std_msgs.msg import Float64MultiArray
 import time
 import math
+from std_msgs.msg import Float64
+
 
 
 class ASMCController:
@@ -38,10 +40,17 @@ class ASMCController:
         return control
 
     def set_publisher(self, node, joint_name):
+        # Publishers for adaptive gains
         self.pub_k0 = node.create_publisher(Float64, f'/asmc_gains/{joint_name}/K0', 10)
         self.pub_k1 = node.create_publisher(Float64, f'/asmc_gains/{joint_name}/K1', 10)
+        
+        # Publishers for controller parameters
+        self.pub_lambda = node.create_publisher(Float64, f'/asmc_params/{joint_name}/lambda', 10)
+        self.pub_alpha0 = node.create_publisher(Float64, f'/asmc_params/{joint_name}/alpha0', 10)
+        self.pub_alpha1 = node.create_publisher(Float64, f'/asmc_params/{joint_name}/alpha1', 10)
 
     def publish_gains(self):
+        # Publish adaptive gains
         msg_k0 = Float64()
         msg_k0.data = self.K0_hat
         self.pub_k0.publish(msg_k0)
@@ -49,6 +58,19 @@ class ASMCController:
         msg_k1 = Float64()
         msg_k1.data = self.K1_hat
         self.pub_k1.publish(msg_k1)
+        
+        # Publish controller parameters
+        msg_lambda = Float64()
+        msg_lambda.data = self.Lambda
+        self.pub_lambda.publish(msg_lambda)
+        
+        msg_alpha0 = Float64()
+        msg_alpha0.data = self.alpha0
+        self.pub_alpha0.publish(msg_alpha0)
+        
+        msg_alpha1 = Float64()
+        msg_alpha1.data = self.alpha1
+        self.pub_alpha1.publish(msg_alpha1)
 
 
 class ASMCEffortPublisher(Node):
@@ -79,6 +101,9 @@ class ASMCEffortPublisher(Node):
             target = self.get_parameter(f'{name}.target').get_parameter_value().double_value
             self.controllers[name] = ASMCController(lam, alpha0, alpha1)
             self.target_positions[name] = target
+            
+            # Set up publishers for this joint
+            self.controllers[name].set_publisher(self, name)
 
         self.current_positions = {name: 0.0 for name in self.joint_names}
 
@@ -103,6 +128,7 @@ class ASMCEffortPublisher(Node):
         )
 
         self.timer = self.create_timer(0.02, self.control_loop)  # 50 Hz
+        self.publish_timer = self.create_timer(0.5, self.publish_all_gains)  # 2 Hz for publishing gains
 
         self.get_logger().info('ASMC Effort Publisher Node started.')
 
@@ -119,6 +145,10 @@ class ASMCEffortPublisher(Node):
         for i, name in enumerate(self.joint_names):
             self.target_positions[name] = msg.data[i]
         self.get_logger().info(f"Updated targets: {self.target_positions}")
+
+    def publish_all_gains(self):
+        for name in self.joint_names:
+            self.controllers[name].publish_gains()
 
     def control_loop(self):
         efforts = []

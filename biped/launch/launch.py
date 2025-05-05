@@ -20,6 +20,8 @@ def generate_launch_description():
     rviz_config_path = os.path.join(pkg_path, 'config', 'biped_config.rviz')
     controller_config_path = PathJoinSubstitution([pkg_path, 'config', 'biped.yaml'])
     src_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'src'))
+    asmc_config_path = os.path.join(pkg_path, 'config', 'asmc.yaml')
+    effort_asmc_script = os.path.join(src_dir, 'effort_asmc.py')
 
     # Launch arguments
     use_with_sim_arg = DeclareLaunchArgument('use_sim_time', default_value='True', description='Use simulation settings')
@@ -154,13 +156,24 @@ def generate_launch_description():
 
     dynamic_python_scripts = []
     for script in os.listdir(src_dir):
-        if script.endswith('.py'):  # Only include Python files
+        if script == 'effort_asmc.py':
+            # Skip effort_asmc.py - we'll launch it separately with parameters
+            continue
+        elif script.endswith('.py'):
             dynamic_python_scripts.append(
                 ExecuteProcess(
                     cmd=['python3', os.path.join(src_dir, script)],
                     output='screen'
                 )
             )
+
+    effort_asmc_process = ExecuteProcess(
+        cmd=[
+            'python3', effort_asmc_script,
+            '--ros-args', '--params-file', asmc_config_path
+        ],
+        output='screen'
+    )
 
     return LaunchDescription([
         use_with_sim_arg,
@@ -177,6 +190,6 @@ def generate_launch_description():
         joint_state_publisher_gui,
         rviz_node,
         load_controllers,
-        *dynamic_python_scripts  # Add dynamically discovered Python scripts
-
+        effort_asmc_process,  # This specific call for effort_asmc.py
+        *dynamic_python_scripts  # All other Python scripts
     ])
